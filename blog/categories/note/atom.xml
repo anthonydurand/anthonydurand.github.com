@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[{A:D}]]></title>
-  <link href="http://anthonydurand.github.com/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Note | {A:D}]]></title>
+  <link href="http://anthonydurand.github.com/blog/categories/note/atom.xml" rel="self"/>
   <link href="http://anthonydurand.github.com/"/>
   <updated>2012-08-03T13:49:53+02:00</updated>
   <id>http://anthonydurand.github.com/</id>
@@ -14,15 +14,6 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Astuces GIT]]></title>
-    <link href="http://anthonydurand.github.com/blog/2012/08/02/astuces-git/"/>
-    <updated>2012-08-02T21:29:00+02:00</updated>
-    <id>http://anthonydurand.github.com/blog/2012/08/02/astuces-git</id>
-    <content type="html"><![CDATA[
-]]></content>
-  </entry>
-  
-  <entry>
     <title type="html"><![CDATA[Bienvenue sur ce blog]]></title>
     <link href="http://anthonydurand.github.com/blog/2012/08/01/bienvenue-sur-ce-blog/"/>
     <updated>2012-08-01T12:51:00+02:00</updated>
@@ -30,18 +21,16 @@
     <content type="html"><![CDATA[<p>Bienvenue cher visiteur sur ce modeste blog.</p>
 
 
-<h3>Qu&#8217;a t&#8217;il de particulier me direz-vous ?</h3>
+<h3>Qu'a t'il de particulier me direz-vous ?</h3>
 
 
 <p>Et bien, ce blog est hébergé sur GitHub, en utilisant une plate-forme appelée <a href="http://octopress.org/">Octopress</a>.</p>
 
 
-<p>La particularité d&#8217;Octopress c&#8217;est que le blog est statique, ce n&#8217;est que du HTML. Ici pas de PHP. On crée ses posts en markdown. Vous pouvez voir un exemple ci-dessous.</p>
+<p>La particularité d'Octopress c'est que le blog est statique, ce n'est que du HTML. Ici pas de PHP. On crée ses posts en markdown. Vous pouvez voir un exemple ci-dessous.</p>
 
 
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<h2><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -60,30 +49,47 @@
 <span class='line-number'>17</span>
 <span class='line-number'>18</span>
 <span class='line-number'>19</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>---
-</span><span class='line'>layout: post
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/h2>
+</span><span class='line'>
+</span><span class='line'>&lt;p>layout: post
 </span><span class='line'>title: "Bienvenue sur ce blog"
 </span><span class='line'>date: 2012-08-01 12:51
 </span><span class='line'>comments: true
 </span><span class='line'>published: true
-</span><span class='line'>categories: 
+</span><span class='line'>categories:
 </span><span class='line'>- Note
 </span><span class='line'>tags:
 </span><span class='line'>- octopress
 </span><span class='line'>- initation
-</span><span class='line'>- tuto
-</span><span class='line'>- tutorial
-</span><span class='line'>---
+</span><span class='line'>- tuto&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h2>- tutorial&lt;/h2>
 </span><span class='line'>
 </span><span class='line'>&lt;p>Bienvenue cher visiteur sur ce modeste blog.&lt;/p>
+</span><span class='line'>
+</span><span class='line'>
 </span><span class='line'>&lt;h3>Qu'a t'il de particulier me direz-vous ?&lt;/h3>
+</span><span class='line'>
+</span><span class='line'>
 </span><span class='line'>&lt;p>Et bien, ce blog est hébergé sur GitHub, en utilisant une plate-forme appelée &lt;a href="http://octopress.org/">Octopress&lt;/a>.&lt;/p>
-</span><span class='line'>&lt;p>La particularité d'Octopress c'est que le blog est statique, ce n'est que du HTML. Ici pas de PHP. On crée ses posts en markdown. Vous pouvez voir un exemple ci-dessous.&lt;/p></span></code></pre></td></tr></table></div></figure>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>&lt;p>La particularité d'Octopress c'est que le blog est statique, ce n'est que du HTML. Ici pas de PHP. On crée ses posts en markdown. Vous pouvez voir un exemple ci-dessous.&lt;/p>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-
-
-
-<p>Vous voyez en haut un bloc encadré par &#8212; qui définie les &#8220;méta&#8221; de votre article ou page, un peu comme les méta box sous wordpress.</p>
+<p>Vous voyez en haut un bloc encadré par --- qui définie les "méta" de votre article ou page, un peu comme les méta box sous wordpress.</p>
 
 
 <ul>
@@ -91,13 +97,13 @@
     <li><strong>title</strong> : définit le titre de votre article</li>
     <li><strong>date</strong>: vous avez compris !</li>
     <li><strong>comments</strong>: définit si vous activez ou pas les commentaires via disqus</li>
-    <li><strong>published</strong>: définit si votre atricle sera publié ou pas lors du &#8220;generate&#8221; (on verra ça après)</li>
+    <li><strong>published</strong>: définit si votre atricle sera publié ou pas lors du "generate" (on verra ça après)</li>
     <li><strong>categories</strong>: définit la ou les catégories que vous attribuer à votre article</li>
     <li><strong>tags</strong>: définit le ou les tags que vous attribuer à votre article</li>
 </ul>
 
 
-<p>Non mais attends si ça fait tout comme wordpress pourquoi s&#8217;embêter avec <a href="http://octopress.org/">Octopress</a>. Encore un truc à apprendre, quoi !</p>
+<p>Non mais attends si ça fait tout comme wordpress pourquoi s'embêter avec <a href="http://octopress.org/">Octopress</a>. Encore un truc à apprendre, quoi !</p>
 
 
 <hr>
@@ -108,13 +114,13 @@
 
 <p></p>
 
-<p>Pas de base de données, pas de mysql, pas d&#8217;injection SQL, j&#8217;en passe et des meilleures. Ici que du HTML. La rapidité de votre blog sera x10 même avec de gros pics à 10 000 visiteurs en même temps.</p>
+<p>Pas de base de données, pas de mysql, pas d'injection SQL, j'en passe et des meilleures. Ici que du HTML. La rapidité de votre blog sera x10 même avec de gros pics à 10 000 visiteurs en même temps.</p>
 
 
-<p>Pas de php, donc pas server side, la rapidité s&#8217;en ressent aussi.</p>
+<p>Pas de php, donc pas server side, la rapidité s'en ressent aussi.</p>
 
 
-<p>Vous pouvez utiliser votre editeur de texte favori avec vos snippets, votre environnement favori, pas de tinyMCE. Si vous avez l&#8217;habitude de travailler avec <a href="http://www.sublimetext.com/2">Sublime text 2</a> comme moi, vous écrirez vos articles plus rapidement.</p>
+<p>Vous pouvez utiliser votre editeur de texte favori avec vos snippets, votre environnement favori, pas de tinyMCE. Si vous avez l'habitude de travailler avec <a href="http://www.sublimetext.com/2">Sublime text 2</a> comme moi, vous écrirez vos articles plus rapidement.</p>
 
 
 <p>Vous pouvez utiliser HTML 5, CSS 3, Octopress est livré par défaut avec <a href="http://sass-lang.com/">SASS</a> et <a href="http://compass-style.org/">Compass</a></p>
@@ -134,7 +140,7 @@
     <li><a href="http://octopress.org/docs/plugins/render-partial/">Render Partial</a> - <em>insérer un fichier dans un autre article ou la page</em></li>
     <li><a href="http://octopress.org/docs/plugins/blockquote/">Block Quote</a> - <em>générer des belles citations sémantiques</em></li>
     <li><a href="http://octopress.org/docs/plugins/pullquote/">Pull Quote</a> - <em>générer des guillemets &mdash; - pas de données en double, pas de javascript</em></li>
-    <li><a href="http://octopress.org/docs/plugins/category-generator/">Category Generator</a> - <em>génère des pages d&#8217;archives pour chaque catégorie du blog</em></li>
+    <li><a href="http://octopress.org/docs/plugins/category-generator/">Category Generator</a> - <em>génère des pages d'archives pour chaque catégorie du blog</em></li>
     <li><a href="http://octopress.org/docs/plugins/include-array/">Include Array</a> - <em>comprend un tableau de partials indiqués dans _config.yml</em></li>
 </ul>
 
@@ -142,7 +148,7 @@
 <p>Vous avez votre blog ET vote logiciel de versioning au <em>même</em> endroit.</p>
 
 
-<p>Le thème par défaut est &#8220;responsive&#8221;.</p>
+<p>Le thème par défaut est "responsive".</p>
 
 
 <p>Vous pouvez inclure votre propre nom de domaine et ainsi avoir votre blog à monsite.com au lieu de monsite.github.com</p>
@@ -163,19 +169,19 @@
 <p>Vous devez connaitre Git et GitHub pour pouvoir blogguer et SASS pour modifier votre thème.</p>
 
 
-<p>Vous devez avoir une machine avec vos sources octopress dessus et git, ruby et plusieurs gem d&#8217;installés dessus pour pouvoir mettre votre blog à jour.</p>
+<p>Vous devez avoir une machine avec vos sources octopress dessus et git, ruby et plusieurs gem d'installés dessus pour pouvoir mettre votre blog à jour.</p>
 
 
-<p>A chaque mise à jour de votre site,  vous devez rénénérer <strong>tout</strong> votre site. Bon je vous rassure ça prends 10 secondes mais ça peut surement durer 1 à 2 minutes pour les gros blogs avec des centaines d&#8217;articles dessus, vu que ce n&#8217;est que du HTML.</p>
+<p>A chaque mise à jour de votre site,  vous devez rénénérer <strong>tout</strong> votre site. Bon je vous rassure ça prends 10 secondes mais ça peut surement durer 1 à 2 minutes pour les gros blogs avec des centaines d'articles dessus, vu que ce n'est que du HTML.</p>
 
 
 <hr>
 
 
-<p>Voilà cette présentation est terminée, j&#8217;espère très prochainement vous faire un tuto complet en français pour permettre au gens qui veulent essayé de tester, même si le site <a href="http://octopress.org/">Octopress</a> l&#8217;explique très simplement en anglais.</p>
+<p>Voilà cette présentation est terminée, j'espère très prochainement vous faire un tuto complet en français pour permettre au gens qui veulent essayé de tester, même si le site <a href="http://octopress.org/">Octopress</a> l'explique très simplement en anglais.</p>
 
 
-<h6>PS : le thème de ce site est loin d&#8217;être fini, il va évolué rapidement vers son état final. Merci de votre compréhension.</h6>
+<h6>PS : le thème de ce site est loin d'être fini, il va évolué rapidement vers son état final. Merci de votre compréhension.</h6>
 
 ]]></content>
   </entry>
