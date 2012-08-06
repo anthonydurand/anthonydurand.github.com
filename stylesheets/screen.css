@@ -199,9 +199,9 @@ blockquote cite:before { content: '\2014'; padding-right: .3em; padding-left: .3
 .force-wrap, article a, aside.sidebar a { white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; white-space: pre-wrap; word-wrap: break-word; }
 
 /* line 21, C:/Octopress/sass/base/_layout.scss */
-.group, body > header, body > nav, body > footer, body #content > article, body #content > div > article, body #content > div > section, body div.pagination, #main, #content, .sidebar { *zoom: 1; }
+.group, body > header, body > nav, body > footer, body #content > article, body #content > div > article, body #content > div > section, body div.pagination, aside.sidebar, #main, #content, .sidebar { *zoom: 1; }
 /* line 38, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-.group:after, body > header:after, body > nav:after, body > footer:after, body #content > article:after, body #content > div > article:after, body #content > div > section:after, body div.pagination:after, #main:after, #content:after, .sidebar:after { content: ""; display: table; clear: both; }
+.group:after, body > header:after, body > nav:after, body > footer:after, body #content > article:after, body #content > div > article:after, body #content > div > section:after, body div.pagination:after, aside.sidebar:after, #main:after, #content:after, .sidebar:after { content: ""; display: table; clear: both; }
 
 /* line 46, C:/Octopress/sass/base/_layout.scss */
 body { -webkit-text-size-adjust: none; max-width: 1200px; position: relative; margin: 0 auto; }
@@ -230,7 +230,7 @@ body > header { font-size: 1em; padding-top: 1.5em; padding-bottom: 1.5em; }
 #content > div, #content > article { width: 100%; }
 
 /* line 97, C:/Octopress/sass/base/_layout.scss */
-aside.sidebar { display: none; }
+aside.sidebar { float: none; padding: 0 18px 1px; background-color: #f7f7f7; border-top: 1px solid #e0e0e0; }
 
 /* line 106, C:/Octopress/sass/base/_layout.scss */
 .flex-content, article img, article video, article .flash-video, aside.sidebar img { max-width: 100%; height: auto; }
@@ -754,45 +754,45 @@ figure.code .highlight { margin-bottom: 0; }
 /* line 1, C:/Octopress/sass/partials/sidebar/_base.scss */
 .side-shadow-border, aside.sidebar section h1, aside.sidebar li { -webkit-box-shadow: white 0 1px; -moz-box-shadow: white 0 1px; box-shadow: white 0 1px; }
 
-/* line 4, C:/Octopress/sass/partials/sidebar/_base.scss */
+/* line 5, C:/Octopress/sass/partials/sidebar/_base.scss */
 aside.sidebar { overflow: hidden; color: #4b4b4b; text-shadow: white 0 1px; }
-/* line 9, C:/Octopress/sass/partials/sidebar/_base.scss */
+/* line 11, C:/Octopress/sass/partials/sidebar/_base.scss */
 aside.sidebar section { font-size: .8em; line-height: 1.4em; margin-bottom: 1.5em; }
-/* line 14, C:/Octopress/sass/partials/sidebar/_base.scss */
+/* line 16, C:/Octopress/sass/partials/sidebar/_base.scss */
 aside.sidebar section h1 { margin: 1.5em 0 0; padding-bottom: .2em; border-bottom: 1px solid #e0e0e0; }
-/* line 19, C:/Octopress/sass/partials/sidebar/_base.scss */
+/* line 21, C:/Octopress/sass/partials/sidebar/_base.scss */
 aside.sidebar section h1 + p { padding-top: .4em; }
-/* line 24, C:/Octopress/sass/partials/sidebar/_base.scss */
+/* line 26, C:/Octopress/sass/partials/sidebar/_base.scss */
 aside.sidebar img { -webkit-border-radius: 0.3em; -moz-border-radius: 0.3em; -ms-border-radius: 0.3em; -o-border-radius: 0.3em; border-radius: 0.3em; -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 1px 4px; -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 1px 4px; box-shadow: rgba(0, 0, 0, 0.15) 0 1px 4px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; border: white 0.3em solid; }
-/* line 29, C:/Octopress/sass/partials/sidebar/_base.scss */
+/* line 31, C:/Octopress/sass/partials/sidebar/_base.scss */
 aside.sidebar ul { margin-bottom: 0.5em; margin-left: 0; }
-/* line 33, C:/Octopress/sass/partials/sidebar/_base.scss */
+/* line 35, C:/Octopress/sass/partials/sidebar/_base.scss */
 aside.sidebar li { list-style: none; padding: .5em 0; margin: 0; border-bottom: 1px solid #e0e0e0; }
-/* line 39, C:/Octopress/sass/partials/sidebar/_base.scss */
+/* line 41, C:/Octopress/sass/partials/sidebar/_base.scss */
 aside.sidebar li p:last-child { margin-bottom: 0; }
-/* line 43, C:/Octopress/sass/partials/sidebar/_base.scss */
+/* line 45, C:/Octopress/sass/partials/sidebar/_base.scss */
 aside.sidebar a { color: inherit; -webkit-transition: color 0.5s; -moz-transition: color 0.5s; -ms-transition: color 0.5s; -o-transition: color 0.5s; transition: color 0.5s; }
-/* line 47, C:/Octopress/sass/partials/sidebar/_base.scss */
-aside.sidebar:hover a { color: #f02311; }
 /* line 49, C:/Octopress/sass/partials/sidebar/_base.scss */
+aside.sidebar:hover a { color: #f02311; }
+/* line 51, C:/Octopress/sass/partials/sidebar/_base.scss */
 aside.sidebar:hover a:hover { color: #f34f41; }
 
-/* line 52, C:/Octopress/sass/partials/sidebar/_base.scss */
-.aside-alt-link, #tweets a[href*='twitter.com/search'], #pinboard_linkroll .pin-tag { color: #7e7e7e; }
 /* line 54, C:/Octopress/sass/partials/sidebar/_base.scss */
+.aside-alt-link, #tweets a[href*='twitter.com/search'], #pinboard_linkroll .pin-tag { color: #7e7e7e; }
+/* line 56, C:/Octopress/sass/partials/sidebar/_base.scss */
 .aside-alt-link:hover, #tweets a[href*='twitter.com/search']:hover, #pinboard_linkroll .pin-tag:hover { color: #f34f41; }
 
-@media only screen and (min-width: 768px) { /* line 60, C:/Octopress/sass/partials/sidebar/_base.scss */
+@media only screen and (min-width: 768px) { /* line 62, C:/Octopress/sass/partials/sidebar/_base.scss */
   .toggle-sidebar { outline: none; position: absolute; right: -10px; top: 0; bottom: 0; display: inline-block; text-decoration: none; color: #cecece; width: 9px; cursor: pointer; }
-  /* line 68, C:/Octopress/sass/partials/sidebar/_base.scss */
+  /* line 70, C:/Octopress/sass/partials/sidebar/_base.scss */
   .toggle-sidebar:hover { background: #e9e9e9; background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(224, 224, 224, 0.5)), color-stop(100%, rgba(224, 224, 224, 0))); background: -webkit-linear-gradient(left, rgba(224, 224, 224, 0.5), rgba(224, 224, 224, 0)); background: -moz-linear-gradient(left, rgba(224, 224, 224, 0.5), rgba(224, 224, 224, 0)); background: -o-linear-gradient(left, rgba(224, 224, 224, 0.5), rgba(224, 224, 224, 0)); background: -ms-linear-gradient(left, rgba(224, 224, 224, 0.5), rgba(224, 224, 224, 0)); background: linear-gradient(left, rgba(224, 224, 224, 0.5), rgba(224, 224, 224, 0)); }
-  /* line 72, C:/Octopress/sass/partials/sidebar/_base.scss */
+  /* line 74, C:/Octopress/sass/partials/sidebar/_base.scss */
   .toggle-sidebar:after { position: absolute; right: -11px; top: 0; width: 20px; font-size: 1.2em; line-height: 1.1em; padding-bottom: .15em; -moz-border-radius-bottomright: 0.3em; -webkit-border-bottom-right-radius: 0.3em; -ms-border-bottom-right-radius: 0.3em; -o-border-bottom-right-radius: 0.3em; border-bottom-right-radius: 0.3em; text-align: center; background: #f8f8f8 url('/images/noise.png?1344235393') top left; border-bottom: 1px solid #e0e0e0; border-right: 1px solid #e0e0e0; content: "\00BB"; text-indent: -1px; }
-  /* line 86, C:/Octopress/sass/partials/sidebar/_base.scss */
+  /* line 88, C:/Octopress/sass/partials/sidebar/_base.scss */
   .collapse-sidebar .toggle-sidebar { text-indent: 0px; right: -20px; width: 19px; }
-  /* line 90, C:/Octopress/sass/partials/sidebar/_base.scss */
+  /* line 92, C:/Octopress/sass/partials/sidebar/_base.scss */
   .collapse-sidebar .toggle-sidebar:hover { background: #e9e9e9; }
-  /* line 93, C:/Octopress/sass/partials/sidebar/_base.scss */
+  /* line 95, C:/Octopress/sass/partials/sidebar/_base.scss */
   .collapse-sidebar .toggle-sidebar:after { border-left: 1px solid #e0e0e0; text-shadow: #fff 0 1px; content: "\00AB"; left: 0px; right: 0; text-align: center; text-indent: 0; border: 0; border-right-width: 0; background: none; } }
 /* line 2, C:/Octopress/sass/partials/sidebar/_twitter.scss */
 #tweets .loading { background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDowMjgwMTE3NDA3MjA2ODExQTQxQUNFN0NCOEMyNEMzNiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDowQkYxMEI5QjQ5QzYxMUUwQTJGN0YyQzFDMzFCQjZCMyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDowQkYxMEI5QTQ5QzYxMUUwQTJGN0YyQzFDMzFCQjZCMyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkIxREYyRDc2MTIyMDY4MTFBNDFBQ0U3Q0I4QzI0QzM2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjAyODAxMTc0MDcyMDY4MTFBNDFBQ0U3Q0I4QzI0QzM2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+bAX+SwAAAZBJREFUeNrsl+1tgzAQhgF1AHeCphPU3QA2SDcIEzRMUDpB0wlCJ8gIcf+DQicoG5QNqC29SJZl/EHc8oeTTkTCvnvse3048TAM0ZKWRAvbCnDTNE3omBvulHvPnVkBAic/ct/hd4fn/X+VQE4+AjzN0UDK/Zv7njtxTL5Tko9xLgAjPgA96vjG/QcBqCE5wVgT3HkKQgfQcq+UABcESTXjXXaKYr6zBnIFYtzSswbk2bFMVFOmSYBSN1gBGetOPIT64noMmW6wRvX9jB6xlXT2YALIkSSyCNDXTpLYM1MfEBooZqzSxVoskCQOx4v8AQDF7m5MAD0oQ5uImXG/Fbtsa8UVenkRKHmHmMznW9AFLMPH3I8RCyBGsZCDDmDvCJBBvdfUvtcBtOj1W0PzKNH96BXJ2dSFRLx4x7E4AuiT+x0S0gCqr2w3ogqJT+j1aSDF57ZrWaJ0p0edUDxN1PkVsax3wkQzucDZP3gqv5Xmlq5z47quXdpmKmlChv3CVjPpEupl8frXbAVYGuBXgAEAuftfzMLpDZgAAAAASUVORK5CYII=') no-repeat center 0.5em; color: #c4c4c4; text-shadow: #f8f8f8 0 1px; text-align: center; padding: 2.5em 0 .5em; }
