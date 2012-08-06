@@ -1,0 +1,748 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>1 - La base - {A:D}</title>
+  <meta name="author" content="Anthony DURAND">
+
+  
+  <meta name="description" content="Informations préalables Pour ce tuto voici la configuration que j&#8217;ai : OS: Windows 7 pro 64bits Editeur: Sublime text 2 Console: Console2 Pré &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://anthonydurand.github.com/1-la-base">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="{A:D}" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-33866728-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">{A:D}</a></h1>
+  
+    <h2>Du code, des astuces et des pixels.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">1 - La base</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-06T21:00:00+02:00" pubdate data-updated="true">Le 06/08/2012</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><h3>Informations préalables</h3>
+
+
+<p>Pour ce tuto voici la configuration que j&#8217;ai :</p>
+
+
+<ul>
+    <li>OS: Windows 7 pro 64bits</li>
+    <li>Editeur: <a href="http://sublimetext.com/2">Sublime text 2</a></li>
+    <li>Console: <a href="http://sourceforge.net/projects/console/">Console2</a></li>
+</ul>
+
+
+<h3>Prérequis</h3>
+
+
+<p>Vous devez avoir d&#8217;installé :</p>
+
+
+<ul>
+    <li><a href="http://git-scm.com/">Git</a></li>
+    <li><a href="http://www.ruby-lang.org/fr/">Ruby 1.9.3</a></li>
+</ul>
+
+
+<p>Pour pouvoir utilisé Octopress vous devez OBLIGATOIREMENT connaitre et savoir utilisé :</p>
+
+
+<ul>
+    <li>GIT</li>
+    <li>SASS et Compass</li>
+    <li>Les lignes de commandes</li>
+</ul>
+
+
+<h3>Conventions utilisées dans cet article :</h3>
+
+
+<p>$ désigne une entrée dans la console, vous ne devez PAS taper le symbole $ lorsque vous entrer du code !</p>
+
+
+
+
+<h2>Début du tuto : </h2>
+
+
+<p>Ouvrer la console, mettez-vous sur le chemin où vous voulez créer octopress, je tiens à préciser que le dossier octopress sera crée lors de la copie du dépot git, inutile de le créer.</p>
+
+
+<p>par exemple si vous voulez créer octopress dans c:\octopress, taper dans la console :</p>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ cd c:\</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<p>Si vous voulez créer octopress dans Mes documents : </p>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ cd C:\Users\Anthony\Documents</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<p>Bien entendu remplacer Anthony par votre Nom :p</p>
+
+
+<p>Pour les besoin de ce tuto, je créerait le dossier octopress_tuto directement à la raine de C, donc cela donnera :</p>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ cd c:\
+</span><span class='line'>$ git clone https://github.com/imathis/octopress.git octopress_tuto</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<p>Nous devons ensuite installer les dépendances d&#8217;Octopress, c&#8217;est-à-dire les autres gem ruby dont il a besoin pour fonctionner</p>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ gem install bundler</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<p>puis :</p>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ bundle install</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<p>Voilà nous avons la base d&#8217;octopress et ses dépendances d&#8217;installés, vous pouvez voir ci-dessous l&#8217;arborescence ainsi créée. dans c:\octopress_tuto</p>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+<span class='line-number'>83</span>
+<span class='line-number'>84</span>
+<span class='line-number'>85</span>
+<span class='line-number'>86</span>
+<span class='line-number'>87</span>
+<span class='line-number'>88</span>
+<span class='line-number'>89</span>
+<span class='line-number'>90</span>
+<span class='line-number'>91</span>
+<span class='line-number'>92</span>
+<span class='line-number'>93</span>
+<span class='line-number'>94</span>
+<span class='line-number'>95</span>
+<span class='line-number'>96</span>
+<span class='line-number'>97</span>
+<span class='line-number'>98</span>
+<span class='line-number'>99</span>
+<span class='line-number'>100</span>
+<span class='line-number'>101</span>
+<span class='line-number'>102</span>
+<span class='line-number'>103</span>
+<span class='line-number'>104</span>
+<span class='line-number'>105</span>
+<span class='line-number'>106</span>
+<span class='line-number'>107</span>
+<span class='line-number'>108</span>
+<span class='line-number'>109</span>
+<span class='line-number'>110</span>
+<span class='line-number'>111</span>
+<span class='line-number'>112</span>
+<span class='line-number'>113</span>
+<span class='line-number'>114</span>
+<span class='line-number'>115</span>
+<span class='line-number'>116</span>
+<span class='line-number'>117</span>
+<span class='line-number'>118</span>
+<span class='line-number'>119</span>
+<span class='line-number'>120</span>
+<span class='line-number'>121</span>
+<span class='line-number'>122</span>
+<span class='line-number'>123</span>
+<span class='line-number'>124</span>
+<span class='line-number'>125</span>
+<span class='line-number'>126</span>
+<span class='line-number'>127</span>
+<span class='line-number'>128</span>
+<span class='line-number'>129</span>
+<span class='line-number'>130</span>
+<span class='line-number'>131</span>
+<span class='line-number'>132</span>
+<span class='line-number'>133</span>
+<span class='line-number'>134</span>
+<span class='line-number'>135</span>
+<span class='line-number'>136</span>
+<span class='line-number'>137</span>
+<span class='line-number'>138</span>
+<span class='line-number'>139</span>
+<span class='line-number'>140</span>
+<span class='line-number'>141</span>
+<span class='line-number'>142</span>
+<span class='line-number'>143</span>
+<span class='line-number'>144</span>
+<span class='line-number'>145</span>
+<span class='line-number'>146</span>
+<span class='line-number'>147</span>
+<span class='line-number'>148</span>
+<span class='line-number'>149</span>
+<span class='line-number'>150</span>
+<span class='line-number'>151</span>
+<span class='line-number'>152</span>
+<span class='line-number'>153</span>
+<span class='line-number'>154</span>
+<span class='line-number'>155</span>
+<span class='line-number'>156</span>
+<span class='line-number'>157</span>
+<span class='line-number'>158</span>
+<span class='line-number'>159</span>
+<span class='line-number'>160</span>
+<span class='line-number'>161</span>
+<span class='line-number'>162</span>
+<span class='line-number'>163</span>
+<span class='line-number'>164</span>
+<span class='line-number'>165</span>
+<span class='line-number'>166</span>
+<span class='line-number'>167</span>
+<span class='line-number'>168</span>
+<span class='line-number'>169</span>
+<span class='line-number'>170</span>
+<span class='line-number'>171</span>
+<span class='line-number'>172</span>
+<span class='line-number'>173</span>
+<span class='line-number'>174</span>
+<span class='line-number'>175</span>
+<span class='line-number'>176</span>
+<span class='line-number'>177</span>
+<span class='line-number'>178</span>
+<span class='line-number'>179</span>
+<span class='line-number'>180</span>
+<span class='line-number'>181</span>
+<span class='line-number'>182</span>
+<span class='line-number'>183</span>
+<span class='line-number'>184</span>
+<span class='line-number'>185</span>
+<span class='line-number'>186</span>
+<span class='line-number'>187</span>
+<span class='line-number'>188</span>
+<span class='line-number'>189</span>
+<span class='line-number'>190</span>
+<span class='line-number'>191</span>
+<span class='line-number'>192</span>
+<span class='line-number'>193</span>
+<span class='line-number'>194</span>
+<span class='line-number'>195</span>
+<span class='line-number'>196</span>
+<span class='line-number'>197</span>
+<span class='line-number'>198</span>
+<span class='line-number'>199</span>
+<span class='line-number'>200</span>
+<span class='line-number'>201</span>
+<span class='line-number'>202</span>
+<span class='line-number'>203</span>
+<span class='line-number'>204</span>
+<span class='line-number'>205</span>
+<span class='line-number'>206</span>
+<span class='line-number'>207</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>|   .gitignore
+</span><span class='line'>|   .powrc
+</span><span class='line'>|   .rbenv-version
+</span><span class='line'>|   .rvmrc
+</span><span class='line'>|   .slugignore
+</span><span class='line'>|   CHANGELOG.markdown
+</span><span class='line'>|   config.rb
+</span><span class='line'>|   config.ru
+</span><span class='line'>|   Gemfile
+</span><span class='line'>|   Gemfile.lock
+</span><span class='line'>|   infos.txt
+</span><span class='line'>|   Rakefile
+</span><span class='line'>|   README.markdown
+</span><span class='line'>|   _config.yml
+</span><span class='line'>|   
+</span><span class='line'>+---.themes
+</span><span class='line'>|   +---classic
+</span><span class='line'>|       +---sass
+</span><span class='line'>|       |   |   screen.scss
+</span><span class='line'>|       |   |   _base.scss
+</span><span class='line'>|       |   |   _partials.scss
+</span><span class='line'>|       |   |   
+</span><span class='line'>|       |   +---base
+</span><span class='line'>|       |   |       _layout.scss
+</span><span class='line'>|       |   |       _solarized.scss
+</span><span class='line'>|       |   |       _theme.scss
+</span><span class='line'>|       |   |       _typography.scss
+</span><span class='line'>|       |   |       _utilities.scss
+</span><span class='line'>|       |   |       
+</span><span class='line'>|       |   +---custom
+</span><span class='line'>|       |   |       _colors.scss
+</span><span class='line'>|       |   |       _fonts.scss
+</span><span class='line'>|       |   |       _layout.scss
+</span><span class='line'>|       |   |       _styles.scss
+</span><span class='line'>|       |   |       
+</span><span class='line'>|       |   +---partials
+</span><span class='line'>|       |       |   _archive.scss
+</span><span class='line'>|       |       |   _blog.scss
+</span><span class='line'>|       |       |   _footer.scss
+</span><span class='line'>|       |       |   _header.scss
+</span><span class='line'>|       |       |   _navigation.scss
+</span><span class='line'>|       |       |   _sharing.scss
+</span><span class='line'>|       |       |   _sidebar.scss
+</span><span class='line'>|       |       |   _syntax.scss
+</span><span class='line'>|       |       |   
+</span><span class='line'>|       |       +---sidebar
+</span><span class='line'>|       |               _base.scss
+</span><span class='line'>|       |               _delicious.scss
+</span><span class='line'>|       |               _googleplus.scss
+</span><span class='line'>|       |               _pinboard.scss
+</span><span class='line'>|       |               _twitter.scss
+</span><span class='line'>|       |               
+</span><span class='line'>|       +---source
+</span><span class='line'>|           |   atom.xml
+</span><span class='line'>|           |   favicon.png
+</span><span class='line'>|           |   index.html
+</span><span class='line'>|           |   
+</span><span class='line'>|           +---assets
+</span><span class='line'>|           |   +---jwplayer
+</span><span class='line'>|           |       |   player.swf
+</span><span class='line'>|           |       |   
+</span><span class='line'>|           |       +---glow
+</span><span class='line'>|           |           |   glow.xml
+</span><span class='line'>|           |           |   
+</span><span class='line'>|           |           +---controlbar
+</span><span class='line'>|           |           |       background.png
+</span><span class='line'>|           |           |       blankButton.png
+</span><span class='line'>|           |           |       divider.png
+</span><span class='line'>|           |           |       fullscreenButton.png
+</span><span class='line'>|           |           |       fullscreenButtonOver.png
+</span><span class='line'>|           |           |       muteButton.png
+</span><span class='line'>|           |           |       muteButtonOver.png
+</span><span class='line'>|           |           |       normalscreenButton.png
+</span><span class='line'>|           |           |       normalscreenButtonOver.png
+</span><span class='line'>|           |           |       pauseButton.png
+</span><span class='line'>|           |           |       pauseButtonOver.png
+</span><span class='line'>|           |           |       playButton.png
+</span><span class='line'>|           |           |       playButtonOver.png
+</span><span class='line'>|           |           |       timeSliderBuffer.png
+</span><span class='line'>|           |           |       timeSliderCapLeft.png
+</span><span class='line'>|           |           |       timeSliderCapRight.png
+</span><span class='line'>|           |           |       timeSliderProgress.png
+</span><span class='line'>|           |           |       timeSliderRail.png
+</span><span class='line'>|           |           |       unmuteButton.png
+</span><span class='line'>|           |           |       unmuteButtonOver.png
+</span><span class='line'>|           |           |       
+</span><span class='line'>|           |           +---display
+</span><span class='line'>|           |           |       background.png
+</span><span class='line'>|           |           |       bufferIcon.png
+</span><span class='line'>|           |           |       muteIcon.png
+</span><span class='line'>|           |           |       playIcon.png
+</span><span class='line'>|           |           |       
+</span><span class='line'>|           |           +---dock
+</span><span class='line'>|           |           |       button.png
+</span><span class='line'>|           |           |       
+</span><span class='line'>|           |           +---playlist
+</span><span class='line'>|           |           |       item.png
+</span><span class='line'>|           |           |       itemOver.png
+</span><span class='line'>|           |           |       sliderCapBottom.png
+</span><span class='line'>|           |           |       sliderCapTop.png
+</span><span class='line'>|           |           |       sliderRail.png
+</span><span class='line'>|           |           |       sliderThumb.png
+</span><span class='line'>|           |           |       
+</span><span class='line'>|           |           +---sharing
+</span><span class='line'>|           |                   embedIcon.png
+</span><span class='line'>|           |                   embedScreen.png
+</span><span class='line'>|           |                   shareIcon.png
+</span><span class='line'>|           |                   shareScreen.png
+</span><span class='line'>|           |                   
+</span><span class='line'>|           +---blog
+</span><span class='line'>|           |   +---archives
+</span><span class='line'>|           |           index.html
+</span><span class='line'>|           |           
+</span><span class='line'>|           +---images
+</span><span class='line'>|           |       bird_32_gray.png
+</span><span class='line'>|           |       bird_32_gray_fail.png
+</span><span class='line'>|           |       code_bg.png
+</span><span class='line'>|           |       dotted-border.png
+</span><span class='line'>|           |       email.png
+</span><span class='line'>|           |       line-tile.png
+</span><span class='line'>|           |       noise.png
+</span><span class='line'>|           |       rss.png
+</span><span class='line'>|           |       search.png
+</span><span class='line'>|           |       
+</span><span class='line'>|           +---javascripts
+</span><span class='line'>|           |   |   ender.js
+</span><span class='line'>|           |   |   github.js
+</span><span class='line'>|           |   |   modernizr-2.0.js
+</span><span class='line'>|           |   |   octopress.js
+</span><span class='line'>|           |   |   pinboard.js
+</span><span class='line'>|           |   |   twitter.js
+</span><span class='line'>|           |   |   
+</span><span class='line'>|           |   +---libs
+</span><span class='line'>|           |           ender.js
+</span><span class='line'>|           |           jXHR.js
+</span><span class='line'>|           |           swfobject-dynamic.js
+</span><span class='line'>|           |           
+</span><span class='line'>|           +---_includes
+</span><span class='line'>|           |   |   after_footer.html
+</span><span class='line'>|           |   |   archive_post.html
+</span><span class='line'>|           |   |   article.html
+</span><span class='line'>|           |   |   disqus.html
+</span><span class='line'>|           |   |   facebook_like.html
+</span><span class='line'>|           |   |   footer.html
+</span><span class='line'>|           |   |   google_analytics.html
+</span><span class='line'>|           |   |   google_plus_one.html
+</span><span class='line'>|           |   |   head.html
+</span><span class='line'>|           |   |   header.html
+</span><span class='line'>|           |   |   navigation.html
+</span><span class='line'>|           |   |   twitter_sharing.html
+</span><span class='line'>|           |   |   
+</span><span class='line'>|           |   +---asides
+</span><span class='line'>|           |   |       delicious.html
+</span><span class='line'>|           |   |       github.html
+</span><span class='line'>|           |   |       googleplus.html
+</span><span class='line'>|           |   |       pinboard.html
+</span><span class='line'>|           |   |       recent_posts.html
+</span><span class='line'>|           |   |       twitter.html
+</span><span class='line'>|           |   |       
+</span><span class='line'>|           |   +---custom
+</span><span class='line'>|           |   |   |   after_footer.html
+</span><span class='line'>|           |   |   |   category_feed.xml
+</span><span class='line'>|           |   |   |   footer.html
+</span><span class='line'>|           |   |   |   head.html
+</span><span class='line'>|           |   |   |   header.html
+</span><span class='line'>|           |   |   |   navigation.html
+</span><span class='line'>|           |   |   |   
+</span><span class='line'>|           |   |   +---asides
+</span><span class='line'>|           |   |           about.html
+</span><span class='line'>|           |   |           
+</span><span class='line'>|           |   +---post
+</span><span class='line'>|           |           author.html
+</span><span class='line'>|           |           categories.html
+</span><span class='line'>|           |           date.html
+</span><span class='line'>|           |           disqus_thread.html
+</span><span class='line'>|           |           sharing.html
+</span><span class='line'>|           |           
+</span><span class='line'>|           +---_layouts
+</span><span class='line'>|                   category_index.html
+</span><span class='line'>|                   default.html
+</span><span class='line'>|                   page.html
+</span><span class='line'>|                   post.html
+</span><span class='line'>|                   
+</span><span class='line'>+---plugins
+</span><span class='line'>        backtick_code_block.rb
+</span><span class='line'>        blockquote.rb
+</span><span class='line'>        category_generator.rb
+</span><span class='line'>        code_block.rb
+</span><span class='line'>        date.rb
+</span><span class='line'>        gist_tag.rb
+</span><span class='line'>        haml.rb
+</span><span class='line'>        image_tag.rb
+</span><span class='line'>        include_array.rb
+</span><span class='line'>        include_code.rb
+</span><span class='line'>        jsfiddle.rb
+</span><span class='line'>        octopress_filters.rb
+</span><span class='line'>        pagination.rb
+</span><span class='line'>        post_filters.rb
+</span><span class='line'>        preview_unpublished.rb
+</span><span class='line'>        pullquote.rb
+</span><span class='line'>        pygments_code.rb
+</span><span class='line'>        raw.rb
+</span><span class='line'>        render_partial.rb
+</span><span class='line'>        rubypants.rb
+</span><span class='line'>        sitemap_generator.rb
+</span><span class='line'>        titlecase.rb
+</span><span class='line'>        video_tag.rb</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<p>Nous allons maintenant créer notre thème rendez-vous dans le prochain article</p>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Anthony DURAND</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-06T21:00:00+02:00" pubdate data-updated="true">Le 06/08/2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/categories/octopress/'>octopress</a>, <a class='category' href='/categories/tuto/'>tuto</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://anthonydurand.github.com/1-la-base" data-via="_anthony_durand" data-counturl="http://anthonydurand.github.com/1-la-base" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/bienvenue-sur-ce-blog" title="Previous Post: Bienvenue sur ce blog">&laquo; Bienvenue sur ce blog</a>
+      
+      
+        <a class="basic-alignment right" href="/2-structure-generale" title="Next Post: 2 - Structure g&eacute;n&eacute;rale">2 - Structure g&eacute;n&eacute;rale &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Anthony DURAND -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'a-d';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://anthonydurand.github.com/1-la-base';
+        var disqus_url = 'http://anthonydurand.github.com/1-la-base';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
