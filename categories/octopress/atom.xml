@@ -4,7 +4,7 @@
   <title><![CDATA[Category: octopress | {A:D}]]></title>
   <link href="http://anthonydurand.github.com/categories/octopress/atom.xml" rel="self"/>
   <link href="http://anthonydurand.github.com/"/>
-  <updated>2012-08-07T18:44:26+02:00</updated>
+  <updated>2012-08-07T20:12:59+02:00</updated>
   <id>http://anthonydurand.github.com/</id>
   <author>
     <name><![CDATA[Anthony DURAND]]></name>
@@ -875,6 +875,9 @@
 
 
 <p>Liquid error: undefined method `Py_IsInitialized' for RubyPython::Python:Module</p>
+
+<p>Vous pouvez récupérer le contenu de cet octopress_tuto dans  la branche <a href="https://github.com/anthonydurand/octopress_tuto.git">etape-1</a> du dépot GitHub spécialement crée à l'occasion de ce tuto.</p>
+
 ]]></content>
   </entry>
   
