@@ -4,7 +4,7 @@
   <title><![CDATA[{A:D}]]></title>
   <link href="http://anthonydurand.github.com/atom.xml" rel="self"/>
   <link href="http://anthonydurand.github.com/"/>
-  <updated>2012-08-07T20:12:59+02:00</updated>
+  <updated>2012-08-07T20:15:14+02:00</updated>
   <id>http://anthonydurand.github.com/</id>
   <author>
     <name><![CDATA[Anthony DURAND]]></name>
@@ -812,7 +812,36 @@
 <p>Ce fichier contient tout simplement le logo, le sous-titre et la navigation du site qui se limite ici à &#8220;Accueil&#8221; et &#8220;A propos&#8221;. Cette template étant en fait un blog le plus épuré possible dans le style de short.retinart.com, daneden.me et davegamache.com (dont je me suis <a href="https://github.com/dhgamache/davegamache">plus qu&#8217;inspiré</a> pour ce tuto, j&#8217;en ai même un peu honte.) Mais bon, il représente le genre de thème dont j&#8217;ai envie ET en plus tourne sous Jekyll, qui est le fondement d&#8217;Octopress. C&#8217;est la base parfaite pour vous faire comprendre les bases.</p>
 
 
-<p>Liquid error: undefined method `Py_IsInitialized&#8217; for RubyPython::Python:Module</p>
+
+
+<figure class='code'><figcaption><span>Contenu de nav</span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;nav>
+</span><span class='line'>  &lt;a id="logo" href="http://anthonydurand.github.com/">
+</span><span class='line'>    &lt;hgroup>
+</span><span class='line'>        &lt;h1>&lt;\>&lt;/h1>
+</span><span class='line'>        &lt;h2>{{ site.subtitle }}&lt;/h2>
+</span><span class='line'>    &lt;/hgroup>
+</span><span class='line'>  &lt;/a>
+</span><span class='line'>  &lt;ul class="navigation">
+</span><span class='line'>    &lt;li>&lt;a href="http://anthonydurand.github.com/">Accueil&lt;/a>&lt;/li>
+</span><span class='line'>    &lt;li>&lt;a href="http://anthonydurand.github.com/">A propos&lt;/a>&lt;/li>
+</span><span class='line'>  &lt;/ul>
+</span><span class='line'>&lt;/nav></span></code></pre></td></tr></table></div></figure>
+
+
+
 
 <hr>
 
@@ -823,7 +852,28 @@
 <p>Ce fichier contendra tout simplement le footer de notre site.</p>
 
 
-<p>Liquid error: undefined method `Py_IsInitialized&#8217; for RubyPython::Python:Module</p>
+
+
+<figure class='code'><figcaption><span>Contenu de footer </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;footer class="footer">
+</span><span class='line'>  &lt;span class="author">2012 - {% if site.author %} {{ site.author }} {% endif %}&lt;/span>
+</span><span class='line'>  &lt;aside class="offsite-links">
+</span><span class='line'>    &lt;a class="twitter-link" href="http://www.twitter.com/_">Twitter&lt;/a> /
+</span><span class='line'>    &lt;a class="github-link" href="https://github.com/_">GitHub&lt;/a> / 
+</span><span class='line'>    &lt;a class="rss-link" href="http://anthonydurand.github.com/feed">RSS&lt;/a>
+</span><span class='line'>  &lt;/aside>
+</span><span class='line'>&lt;/footer></span></code></pre></td></tr></table></div></figure>
+
+
+
 
 <p>Vous pouvez récupérer le contenu de cet octopress_tuto dans  la branche <a href="https://github.com/anthonydurand/octopress_tuto.git">etape-1</a> du dépot GitHub spécialement crée à l&#8217;occasion de ce tuto.</p>
 

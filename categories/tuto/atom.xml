@@ -4,7 +4,7 @@
   <title><![CDATA[Category: tuto | {A:D}]]></title>
   <link href="http://anthonydurand.github.com/categories/tuto/atom.xml" rel="self"/>
   <link href="http://anthonydurand.github.com/"/>
-  <updated>2012-08-07T20:12:59+02:00</updated>
+  <updated>2012-08-07T20:15:14+02:00</updated>
   <id>http://anthonydurand.github.com/</id>
   <author>
     <name><![CDATA[Anthony DURAND]]></name>
@@ -863,7 +863,43 @@
 <p>Ce fichier contient tout simplement le logo, le sous-titre et la navigation du site qui se limite ici à "Accueil" et "A propos". Cette template étant en fait un blog le plus épuré possible dans le style de short.retinart.com, daneden.me et davegamache.com (dont je me suis <a href="https://github.com/dhgamache/davegamache">plus qu'inspiré</a> pour ce tuto, j'en ai même un peu honte.) Mais bon, il représente le genre de thème dont j'ai envie ET en plus tourne sous Jekyll, qui est le fondement d'Octopress. C'est la base parfaite pour vous faire comprendre les bases.</p>
 
 
-<p>Liquid error: undefined method `Py_IsInitialized' for RubyPython::Python:Module</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Contenu de nav</span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;nav>
+</span><span class='line'>  &lt;a id="logo" href="http://anthonydurand.github.com/">&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>&lt;hgroup&gt;
+</span><span class='line'>    &lt;h1&gt;&lt;\&gt;&lt;/h1&gt;
+</span><span class='line'>    &lt;h2&gt;{{ site.subtitle }}&lt;/h2&gt;
+</span><span class='line'>&lt;/hgroup&gt;
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>  &lt;/a>
+</span><span class='line'>  &lt;ul class="navigation">&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>&lt;li&gt;&lt;a href="http://anthonydurand.github.com/"&gt;Accueil&lt;/a&gt;&lt;/li&gt;
+</span><span class='line'>&lt;li&gt;&lt;a href="http://anthonydurand.github.com/"&gt;A propos&lt;/a&gt;&lt;/li&gt;
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>  &lt;/ul>
+</span><span class='line'>&lt;/nav></span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <hr>
 
@@ -874,7 +910,29 @@
 <p>Ce fichier contendra tout simplement le footer de notre site.</p>
 
 
-<p>Liquid error: undefined method `Py_IsInitialized' for RubyPython::Python:Module</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Contenu de footer </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;footer class="footer">
+</span><span class='line'>  &lt;span class="author">2012 - {% if site.author %} {{ site.author }} {% endif %}&lt;/span>
+</span><span class='line'>  &lt;aside class="offsite-links">&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>&lt;a class="twitter-link" href="http://www.twitter.com/_"&gt;Twitter&lt;/a&gt; /
+</span><span class='line'>&lt;a class="github-link" href="https://github.com/_"&gt;GitHub&lt;/a&gt; / 
+</span><span class='line'>&lt;a class="rss-link" href="http://anthonydurand.github.com/feed"&gt;RSS&lt;/a&gt;
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>  &lt;/aside>
+</span><span class='line'>&lt;/footer></span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>Vous pouvez récupérer le contenu de cet octopress_tuto dans  la branche <a href="https://github.com/anthonydurand/octopress_tuto.git">etape-1</a> du dépot GitHub spécialement crée à l'occasion de ce tuto.</p>
 
