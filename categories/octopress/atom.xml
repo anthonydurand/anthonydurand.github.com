@@ -4,7 +4,7 @@
   <title><![CDATA[Category: octopress | {A:D}]]></title>
   <link href="http://anthonydurand.github.com/categories/octopress/atom.xml" rel="self"/>
   <link href="http://anthonydurand.github.com/"/>
-  <updated>2012-08-08T10:03:22+02:00</updated>
+  <updated>2012-08-08T23:37:08+02:00</updated>
   <id>http://anthonydurand.github.com/</id>
   <author>
     <name><![CDATA[Anthony DURAND]]></name>
@@ -12,112 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[4 - La cr&eacute;ation du th&grave;me]]></title>
-    <link href="http://anthonydurand.github.com/4-la-creation-du-theme"/>
-    <updated>2012-08-07T23:17:00+02:00</updated>
-    <id>http://anthonydurand.github.com/4-la-creation-du-theme</id>
-    <content type="html"><![CDATA[<p>Nous avons donc pour l'instant notre squelette HTML5 basique qui ressemble à ça une fois assemblé avec les includes.</p>
-
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-<span class='line-number'>44</span>
-<span class='line-number'>45</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;!DOCTYPE html>
-</span><span class='line'>&lt;html>&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;pre>&lt;code>&lt;head&gt;
-</span><span class='line'>&lt;meta charset="utf-8"&gt;
-</span><span class='line'>&lt;title&gt; {% if page.title %} {{ page.title }} | {% endif %}Anthony DURAND&lt;/title&gt;
-</span><span class='line'>&lt;meta name="description" content=""&gt;
-</span><span class='line'>&lt;meta name="author" content="{% if site.author %} {{ site.author }} {% endif %}, {% if site.twitter_user %} {{ site.twitter_user }} | {% endif %}"&gt;
-</span><span class='line'>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
-</span><span class='line'>&lt;meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"&gt;
-</span><span class='line'>&lt;meta property="twitter:account_id" content="" /&gt;
-</span><span class='line'>&lt;link rel="shortcut icon" type="image/x-icon" href="favicon.png"&gt;
-</span><span class='line'>&lt;link rel="stylesheet" href="screen.css" /&gt;
-</span><span class='line'>&lt;!--[if lt IE 9]&gt;&lt;script src="http://html5shim.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;&lt;![endif]--&gt;
-</span><span class='line'>&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"&gt;&lt;/script&gt;
-</span><span class='line'>&lt;/head&gt;
-</span><span class='line'>&lt;/code>&lt;/pre>
-</span><span class='line'>
-</span><span class='line'>&lt;p>  &lt;body>&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;pre>&lt;code>&lt;div class="wrapper"&gt;
-</span><span class='line'>    &lt;nav&gt;
-</span><span class='line'>      &lt;a id="logo" href="http://anthonydurand.github.com/"&gt;
-</span><span class='line'>        &lt;h1&gt;&lt;&gt;&lt;/h1&gt;
-</span><span class='line'>      &lt;/a&gt;
-</span><span class='line'>      &lt;ul class="nav-primary"&gt;
-</span><span class='line'>        &lt;li&gt;&lt;a href="http://anthonydurand.github.com/"&gt;Accueil&lt;/a&gt;&lt;/li&gt;
-</span><span class='line'>        &lt;li&gt;/&lt;/li&gt;
-</span><span class='line'>        &lt;li&gt;&lt;a href="http://anthonydurand.github.com/apropos"&gt;A propos&lt;/a&gt;&lt;/li&gt;
-</span><span class='line'>      &lt;/ul&gt;
-</span><span class='line'>    &lt;/nav&gt;
-</span><span class='line'>  {{ content }}
-</span><span class='line'>    &lt;footer class="footer"&gt;
-</span><span class='line'>      &lt;span class="author"&gt;2012 - {% if site.author %} {{ site.author }} {% endif %}&lt;/span&gt;
-</span><span class='line'>      &lt;aside class="offsite-links"&gt;
-</span><span class='line'>        &lt;a class="twitter-link" href="http://www.twitter.com/_"&gt;Twitter&lt;/a&gt; /
-</span><span class='line'>        &lt;a class="github-link" href="https://github.com/_"&gt;GitHub&lt;/a&gt; / 
-</span><span class='line'>        &lt;a class="rss-link" href="http://anthonydurand.github.com/feed"&gt;RSS&lt;/a&gt;
-</span><span class='line'>      &lt;/aside&gt;
-</span><span class='line'>    &lt;/footer&gt;
-</span><span class='line'>&lt;/div&gt;
-</span><span class='line'>&lt;/code>&lt;/pre>
-</span><span class='line'>
-</span><span class='line'>&lt;p>  &lt;/body>
-</span><span class='line'>&lt;/html></span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>Sortons rapidement la structure des balises et classes présentes pour structurer notre CSS :</p>
-
-
-<p>Liquid error: undefined method `Py_IsInitialized' for RubyPython::Python:Module</p>
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[3 - Les donn&eacute;es de th&egrave;me]]></title>

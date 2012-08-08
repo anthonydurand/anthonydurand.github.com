@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony DURAND">
 
   
-  <meta name="description" content="Dans l&#8217;article précédant nous avions vu comment initialiser octopress.Nous allons maintenant créer notre thème minimaliste (car j&#8217; &hellip;">
+  <meta name="description" content="Informations préalables Pour ce tuto voici la configuration que j&#8217;ai : OS: Windows 7 pro 64bits Editeur: Sublime text 2 Console: Console2 Pré &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -75,7 +75,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/2-structure-generale">2 - Structure g&eacute;n&eacute;rale</a></h1>
+      <h1 class="entry-title"><a href="/1-la-base">1 - La base</a></h1>
     
     
       <p class="meta">
@@ -98,12 +98,121 @@
   </header>
 
 
-  <div class="entry-content"><p>Dans l&#8217;article précédant nous avions vu comment initialiser octopress.Nous allons maintenant créer notre thème minimaliste (car j&#8217;aime le minimalisme). Nous allons donc créer dans <code>c:\octopress_tuto\.themes\</code> un dossier <code>minimal</code> dans l&#8217;explorateur windows.</p>
+  <div class="entry-content"><h3>Informations préalables</h3>
+
+
+<p>Pour ce tuto voici la configuration que j&#8217;ai :</p>
+
+
+<ul>
+    <li>OS: Windows 7 pro 64bits</li>
+    <li>Editeur: <a href="http://sublimetext.com/2">Sublime text 2</a></li>
+    <li>Console: <a href="http://sourceforge.net/projects/console/">Console2</a></li>
+</ul>
+
+
+<h3>Prérequis</h3>
+
+
+<p>Vous devez avoir d&#8217;installé :</p>
+
+
+<ul>
+    <li><a href="http://git-scm.com/">Git</a></li>
+    <li><a href="http://www.ruby-lang.org/fr/">Ruby 1.9.3</a></li>
+</ul>
+
+
+<p>Pour pouvoir utilisé Octopress vous devez OBLIGATOIREMENT connaitre et savoir utiliser :</p>
+
+
+<ul>
+    <li>GIT</li>
+    <li>SASS et Compass</li>
+    <li>Les lignes de commandes</li>
+</ul>
+
+
+<h3>Conventions utilisées dans cet article :</h3>
+
+
+<p>$ désigne une entrée dans la console, vous ne devez PAS taper le symbole $ lorsque vous entrer du code !</p>
 
 
 
 
-<figure class='code'><figcaption><span>Structure de notre thème </span></figcaption>
+<h2>Début du tuto : </h2>
+
+
+<p>Ouvrer la console, mettez-vous sur le chemin où vous voulez créer octopress, je tiens à préciser que le dossier octopress sera crée lors de la copie du dépot git, inutile de le créer.</p>
+
+
+<p>par exemple si vous voulez créer octopress dans c:\octopress, taper dans la console :</p>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ cd c:\</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<p>Si vous voulez créer octopress dans Mes documents : </p>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ cd C:\Users\Anthony\Documents</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<p>Bien entendu remplacer Anthony par votre Nom :p</p>
+
+
+<p>Pour les besoin de ce tuto, je créerait le dossier octopress_tuto directement à la racine de C, donc cela donnera :</p>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ cd c:\
+</span><span class='line'>$ git clone https://github.com/imathis/octopress.git octopress_tuto</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<p>Nous devons ensuite installer les dépendances d&#8217;Octopress, c&#8217;est-à-dire les autres gem ruby dont il a besoin pour fonctionner :</p>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ gem install bundler</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<p>puis :</p>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ bundle install</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<p>Voilà nous avons la base d&#8217;octopress et ses dépendances d&#8217;installés, vous pouvez voir ci-dessous l&#8217;arborescence ainsi créée dans <code>c:\octopress_tuto</code></p>
+
+
+
+
+<figure class='code'><figcaption><span>Arborescence d&#8217;octopress après installation </span></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -137,453 +246,392 @@
 <span class='line-number'>31</span>
 <span class='line-number'>32</span>
 <span class='line-number'>33</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>/minimal/
-</span><span class='line'>|
-</span><span class='line'>+---sass
-</span><span class='line'>|   |   screen.scss
-</span><span class='line'>|   |   
-</span><span class='line'>|   +---base
-</span><span class='line'>|   |       _layout.scss
-</span><span class='line'>|   |       _solarized.scss
-</span><span class='line'>|   |       _theme.scss
-</span><span class='line'>|   |       _typography.scss
-</span><span class='line'>|   |       _utilities.scss
-</span><span class='line'>|   |       
-</span><span class='line'>|   +---custom
-</span><span class='line'>|   |       
-</span><span class='line'>|   +---partials
-</span><span class='line'>|           _footer-nav.scss
-</span><span class='line'>|           _footer.scss
-</span><span class='line'>|           _head.scss
-</span><span class='line'>|           _nav.scss
-</span><span class='line'>|           
-</span><span class='line'>+---source
-</span><span class='line'>    |   index.html
-</span><span class='line'>    |   
-</span><span class='line'>    +---images
-</span><span class='line'>    +---js
-</span><span class='line'>    +---_includes
-</span><span class='line'>    |       footer-nav.html
-</span><span class='line'>    |       footer.html
-</span><span class='line'>    |       head.html
-</span><span class='line'>    |       nav.html
-</span><span class='line'>    |       
-</span><span class='line'>    +---_layouts
-</span><span class='line'>            home.html</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<p><code>sass/</code> contiendra nos fichiers sass pour créer les feuilles de styles et source contiendra nos fichiers templates</p>
-
-
-<hr>
-
-
-<h3>Attardons nous sur <code>sass/</code></h3>
-
-
-<p><code>sass/</code> est divisé en 3 dossiers et un fichier <code>screen.scss</code> qui appelera les autres:</p>
-
-
-<ul>
-    <li><code>base/</code> : <em>contient la base du theme (mediaqueries, typographie, couleurs,etc&#8230;)</em>
-        <ul>
-            <li><code>_layout.scss</code> : <em>contient la structure du thème et les media queries</em> </li>
-            <li><code>_solarized.scss</code> : <em>contient la coloration syntaxique</em> </li>
-            <li><code>_themes.scss</code> : <em>contient les couleurs et les bases du thème</em> </li>
-            <li><code>_typography.scss</code> : <em>contient tout ce qui concerne la typographie</em> </li>
-            <li><code>_utilities.scss</code> : <em>contient quelques @mixins utiles</em> </li>
-        </ul>
-    </li>
-    <li><code>custom/</code> : <em>contient les paramètres que vous souhaitez changer du thème sans toucher au thème lui-même</em>  </li>
-    <li><code>partials/</code> : <em>contient le code spécifique aux zones de nos templates (header, footer, article, blog ,etc&#8230;)</em> nous verrons son contenu plus tard.</li>
-</ul>
-
-
-<hr>
-
-
-<h3>Passons maintenant sur source</h3>
-
-
-<p>qui est le coeur de notre thème. Il contient :</p>
-
-
-<ul>
-    <li><code>_includes/</code> : <em>contient des éléments reccurents qui seront appelés à différents endroits de notre thème (date, auteur,etc&#8230;) </em></li>
-    <li><code>_layouts/</code> : <em>contient les modèles qui seront utilisés lors de la création de vos articles et/ou pages  (Nous verrons ça plus en détails)</em>  </li>
-    <li><code>images/</code> : <em>contient les images de notre thème.</em></li>
-    <li><code>js/</code> : <em>contient le javascript de notre thème.</em></li>
-    <li><code>favicon.png</code> : <em>notre favicon</em> </li>
-    <li><code>index.html</code> : <em>la racine de notre site</em> </li>
-</ul>
-
-
-<p>Notre thème sera un thème minimaliste présentant sur la page d&#8217;accueil une liste de tous les articles avec un sommaire.</p>
-
-
-
-
-<figure class='code'><figcaption><span>Exemple de disposition de home </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>+-------------------------------------------------------------------------------------------------------------------+
-</span><span class='line'>|                                                                                                                   |
-</span><span class='line'>|       Logo        | Sous-titre                                                        Accueil     A propos        |
-</span><span class='line'>|                                                                                                                   |
-</span><span class='line'>+-------------------------------------------------------------------------------------------------------------------+
-</span><span class='line'>|                                                                                                                   |
-</span><span class='line'>|                                                   jj mm aaaa                                                      |
-</span><span class='line'>|                                               Titre de l'article                                                  |
-</span><span class='line'>|                                                                                                                   |
-</span><span class='line'>|       Sommaire de l'article sur plusieurs lignes                                                                  |
-</span><span class='line'>|                                                                                                                   |
-</span><span class='line'>|   -----------------------------------------------------------------------------------------------------------     |
-</span><span class='line'>|                                                                                                                   |
-</span><span class='line'>|                                                   jj mm aaaa                                                      |
-</span><span class='line'>|                                               Titre de l'article                                                  |
-</span><span class='line'>|                                                                                                                   |
-</span><span class='line'>|       Sommaire de l'article sur plusieurs lignes                                                                  |
-</span><span class='line'>|                                                                                                                   |
-</span><span class='line'>+-------------------------------------------------------------------------------------------------------------------+
-</span><span class='line'>|                                                                                                                   |
-</span><span class='line'>|       2012 Votre nom                                                                  Twitter      GitHub         |
-</span><span class='line'>|                                                                                                                   |
-</span><span class='line'>|+------------------------------------------------------------------------------------------------------------------+</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<p>Puis lorsque l&#8217;on clique sur le titre de l&#8217;article, on passe sur l&#8217;article lui-même :</p>
-
-
-
-
-<figure class='code'><figcaption><span>Exemple de disposition d&#8217;article </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>+-------------------------------------------------------------------------------------------------------------------+
-</span><span class='line'>|                                                                                                                   |
-</span><span class='line'>|       Logo        | Sous-titre                                                        Accueil     A propos        |
-</span><span class='line'>|                                                                                                                   |
-</span><span class='line'>+-------------------------------------------------------------------------------------------------------------------+
-</span><span class='line'>|                                                                                                                   |
-</span><span class='line'>|                                                   jj mm aaaa                                                      |
-</span><span class='line'>|                                               Titre de l'article                                                  |
-</span><span class='line'>|                                                                                                                   |
-</span><span class='line'>|       Article                                                                                                     |
-</span><span class='line'>|                                                                                                                   |
-</span><span class='line'>|                                                                                                                   |
-</span><span class='line'>|                                                                                                                   |
-</span><span class='line'>|                                                                                                                   |
-</span><span class='line'>|                                                                                                                   |
-</span><span class='line'>|                                                                                                                   |
-</span><span class='line'>+-------------------------------------------------------------------------------------------------------------------+
-</span><span class='line'>|                                                         |                                                         |
-</span><span class='line'>|       &lt;  Article précédant                              |                             Article suivant >           |
-</span><span class='line'>|                                                         |                                                         |
-</span><span class='line'>+-------------------------------------------------------------------------------------------------------------------+
-</span><span class='line'>|                                                                                                                   |
-</span><span class='line'>|       Commentaires disqus                                                                                         |
-</span><span class='line'>|                                                                                                                   |
-</span><span class='line'>+-------------------------------------------------------------------------------------------------------------------+
-</span><span class='line'>|                                                                                                                   |
-</span><span class='line'>|       2012 Votre nom                                                                  Twitter      GitHub         |
-</span><span class='line'>|                                                                                                                   |
-</span><span class='line'>|+------------------------------------------------------------------------------------------------------------------+</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<p>Bien entendu tout cela sera responsive. ^^</p>
-
-
-<hr>
-
-
-<h3><code>Index.html</code></h3>
-
-
-<p>C&#8217;est le premier fichier que nous allons créer. Pour l&#8217;instant nous le remplissons juste de :</p>
-
-
-
-
-<figure class='code'><figcaption><span>Entête </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>---
-</span><span class='line'>layout: home
-</span><span class='line'>---</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<p>Cela signifie qu&#8217;on lui dit de prendre comme modèle le fichier home.html contenu dans le dossier _layout. On aurait pu l&#8217;appeler accueil ou site. C&#8217;est vous qui choisisser le nom de vos modèles. Par contre le dossier _layout et layout: sont inchangeables. J&#8217;ai donc décidé de l&#8217;appeler home, ainsi je sais que c&#8217;est ma page d&#8217;accueil.</p>
-
-
-<p>Que contient mon <code>home.html</code> ?</p>
-
-
-<hr>
-
-
-<h3><code>home.html</code></h3>
-
-
-<p>Liquid error: No such file or directory - python -c &#8220;import sys; print sys.executable&#8221;</p>
-
-<p>Vous remarquez donc un doctype HTML5 et une structure de site standard avec des include. Ces include signifient qu&#8217;il faut inclure des fichiers HTML se situant dans le dossier _includes. Rien de bien compliqué ! Je lui demande donc de récupérer :</p>
-
-
-<ul>
-    <li><code>head.html</code></li>
-    <li><code>nav.html</code></li>
-    <li><code>footer.html</code></li>
-</ul>
-
-
-<p>et de les inclure à mon <code>home.html</code> comme on le fait sous wordpress avec get_header(), get_footer() par exemple.</p>
-
-
-<h4>mais c&#8217;est quoi ce &#8220;content&#8221; avec les doubles accolades ?</h4>
-
-
-<p>et bien c&#8217;est justement le contenu que l&#8217;on placera dans <code>index.html</code> sous le bloc de code :</p>
-
-
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>---
-</span><span class='line'>layout: home
-</span><span class='line'>---</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<p>Vous saisissez le principe ?</p>
-
-
-<hr>
-
-
-<h3><code>head.html</code></h3>
-
-
-<p>Basiquement, <code>head.html</code> contient tout ce qui se trouve entre les balises </p>
-
-
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;head>&lt;/head></span></code></pre></td></tr></table></div></figure>
-
-
-<p> <p>d&#8217;un document html standard</p></p>
-
-<figure class='code'><figcaption><span>Contenu de head </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;head>
-</span><span class='line'>  &lt;meta charset="utf-8">
-</span><span class='line'>  &lt;title> {% if page.title %} {{ page.title }} | {% endif %}Anthony DURAND&lt;/title>
-</span><span class='line'>  &lt;meta name="description" content="">
-</span><span class='line'>  &lt;meta name="author" content="{% if site.author %} {{ site.author }} {% endif %}", "{% if site.twitter_user %} {{ site.twitter_user }} | {% endif %}">
-</span><span class='line'>  &lt;meta name="viewport" content="width=device-width, initial-scale=1">
-</span><span class='line'>  &lt;meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-</span><span class='line'>  &lt;meta property="twitter:account_id" content="" />
-</span><span class='line'>  &lt;link rel="shortcut icon" type="image/x-icon" href="favicon.png">
-</span><span class='line'>  &lt;link rel="stylesheet" href="screen.css" />
-</span><span class='line'>  &lt;!--[if lt IE 9]>&lt;script src="http://html5shim.googlecode.com/svn/trunk/html5.js">&lt;/script>&lt;![endif]-->
-</span><span class='line'>  &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">&lt;/script>
-</span><span class='line'>&lt;/head></span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<p>On y trouve diverses informations standard. Vous savez de quoi il en retourne. Il y a juste ces codes entre </p>
-
-
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>{% %} et {{}}</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<p>avec des if! Qu&#8217;est-ce que c&#8217;est ?</p>
-
-
-
-
-<figure class='code'><figcaption><span>Exemple d&#8217;accolades </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;title> {% if page.title %} {{ page.title }} | {% endif %}Anthony DURAND&lt;/title>
-</span><span class='line'>../..
-</span><span class='line'>&lt;meta name="author" content="{% if site.author %} {{ site.author }} {% endif %}", "{% if site.twitter_user %} {{ site.twitter_user }} | {% endif %}"></span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<p>Et bien en fait il s&#8217;agit de variable contenues soit dans un fichier de configuration de votre octopress nommé _config.yml ou alors dans l&#8217;entete de votre fichier où se situait rapellez-vous : </p>
-
-
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>---
-</span><span class='line'>layout: home
-</span><span class='line'>---</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<p>Et bien on peut mettre des paramètres dedans ! Comme par exemple le titre, un sous-titre, un sommaire, une date, des catégories, des tags, etc&#8230;</p>
-
-
-<p>Pour le premier exemple; il dit en fait que si dans l&#8217;entete de votre fichier d&#8217;appel (ici c&#8217;était <code>index.html</code> il trouve le contenu &#8220;title&#8221;, il l&#8217;affichera sous la forme &#8220;Titre de la page | Anthony DURAND&#8221;. C&#8217;est aussi simple que ça. Nous verrons un peu plus loin le détail de ces variables.</p>
-
-
-<hr>
-
-
-<h3><code>nav.html</code></h3>
-
-
-<p>Ce fichier contient tout simplement le logo, le sous-titre et la navigation du site qui se limite ici à &#8220;Accueil&#8221; et &#8220;A propos&#8221;. Cette template étant en fait un blog le plus épuré possible dans le style de short.retinart.com, daneden.me et davegamache.com (dont je me suis <a href="https://github.com/dhgamache/davegamache">plus qu&#8217;inspiré</a> pour ce tuto, j&#8217;en ai même un peu honte.) Mais bon, il représente le genre de thème dont j&#8217;ai envie ET en plus tourne sous Jekyll, qui est le fondement d&#8217;Octopress. C&#8217;est la base parfaite pour vous faire comprendre les bases.</p>
-
-
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;nav>
-</span><span class='line'>  &lt;a id="logo" href="/">
-</span><span class='line'>    &lt;hgroup>
-</span><span class='line'>        &lt;h1>&lt;\>&lt;/h1>
-</span><span class='line'>        &lt;h2>{{ site.subtitle }}&lt;/h2>
-</span><span class='line'>    &lt;/hgroup>
-</span><span class='line'>  &lt;/a>
-</span><span class='line'>  &lt;ul class="navigation">
-</span><span class='line'>    &lt;li>&lt;a href="/">Accueil&lt;/a>&lt;/li>
-</span><span class='line'>    &lt;li>&lt;a href="/">A propos&lt;/a>&lt;/li>
-</span><span class='line'>  &lt;/ul>
-</span><span class='line'>&lt;/nav></span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<hr>
-
-
-<h3><code>footer.html</code></h3>
-
-
-<p>Ce fichier contendra tout simplement le footer de notre site.</p>
-
-
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;footer class="footer">
-</span><span class='line'>  &lt;span class="author">2012 - {% if site.author %} {{ site.author }} {% endif %}&lt;/span>
-</span><span class='line'>  &lt;aside class="offsite-links">
-</span><span class='line'>    &lt;a class="twitter-link" href="http://www.twitter.com/_">Twitter&lt;/a> /
-</span><span class='line'>    &lt;a class="github-link" href="https://github.com/_">GitHub&lt;/a> / 
-</span><span class='line'>    &lt;a class="rss-link" href="/feed">RSS&lt;/a>
-</span><span class='line'>  &lt;/aside>
-</span><span class='line'>&lt;/footer></span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<p>Vous pouvez récupérer le contenu de cet octopress_tuto dans la branche <a href="https://github.com/anthonydurand/octopress_tuto.git">etape-1</a> du dépot GitHub spécialement créé à l&#8217;occasion de ce tuto.</p>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+<span class='line-number'>83</span>
+<span class='line-number'>84</span>
+<span class='line-number'>85</span>
+<span class='line-number'>86</span>
+<span class='line-number'>87</span>
+<span class='line-number'>88</span>
+<span class='line-number'>89</span>
+<span class='line-number'>90</span>
+<span class='line-number'>91</span>
+<span class='line-number'>92</span>
+<span class='line-number'>93</span>
+<span class='line-number'>94</span>
+<span class='line-number'>95</span>
+<span class='line-number'>96</span>
+<span class='line-number'>97</span>
+<span class='line-number'>98</span>
+<span class='line-number'>99</span>
+<span class='line-number'>100</span>
+<span class='line-number'>101</span>
+<span class='line-number'>102</span>
+<span class='line-number'>103</span>
+<span class='line-number'>104</span>
+<span class='line-number'>105</span>
+<span class='line-number'>106</span>
+<span class='line-number'>107</span>
+<span class='line-number'>108</span>
+<span class='line-number'>109</span>
+<span class='line-number'>110</span>
+<span class='line-number'>111</span>
+<span class='line-number'>112</span>
+<span class='line-number'>113</span>
+<span class='line-number'>114</span>
+<span class='line-number'>115</span>
+<span class='line-number'>116</span>
+<span class='line-number'>117</span>
+<span class='line-number'>118</span>
+<span class='line-number'>119</span>
+<span class='line-number'>120</span>
+<span class='line-number'>121</span>
+<span class='line-number'>122</span>
+<span class='line-number'>123</span>
+<span class='line-number'>124</span>
+<span class='line-number'>125</span>
+<span class='line-number'>126</span>
+<span class='line-number'>127</span>
+<span class='line-number'>128</span>
+<span class='line-number'>129</span>
+<span class='line-number'>130</span>
+<span class='line-number'>131</span>
+<span class='line-number'>132</span>
+<span class='line-number'>133</span>
+<span class='line-number'>134</span>
+<span class='line-number'>135</span>
+<span class='line-number'>136</span>
+<span class='line-number'>137</span>
+<span class='line-number'>138</span>
+<span class='line-number'>139</span>
+<span class='line-number'>140</span>
+<span class='line-number'>141</span>
+<span class='line-number'>142</span>
+<span class='line-number'>143</span>
+<span class='line-number'>144</span>
+<span class='line-number'>145</span>
+<span class='line-number'>146</span>
+<span class='line-number'>147</span>
+<span class='line-number'>148</span>
+<span class='line-number'>149</span>
+<span class='line-number'>150</span>
+<span class='line-number'>151</span>
+<span class='line-number'>152</span>
+<span class='line-number'>153</span>
+<span class='line-number'>154</span>
+<span class='line-number'>155</span>
+<span class='line-number'>156</span>
+<span class='line-number'>157</span>
+<span class='line-number'>158</span>
+<span class='line-number'>159</span>
+<span class='line-number'>160</span>
+<span class='line-number'>161</span>
+<span class='line-number'>162</span>
+<span class='line-number'>163</span>
+<span class='line-number'>164</span>
+<span class='line-number'>165</span>
+<span class='line-number'>166</span>
+<span class='line-number'>167</span>
+<span class='line-number'>168</span>
+<span class='line-number'>169</span>
+<span class='line-number'>170</span>
+<span class='line-number'>171</span>
+<span class='line-number'>172</span>
+<span class='line-number'>173</span>
+<span class='line-number'>174</span>
+<span class='line-number'>175</span>
+<span class='line-number'>176</span>
+<span class='line-number'>177</span>
+<span class='line-number'>178</span>
+<span class='line-number'>179</span>
+<span class='line-number'>180</span>
+<span class='line-number'>181</span>
+<span class='line-number'>182</span>
+<span class='line-number'>183</span>
+<span class='line-number'>184</span>
+<span class='line-number'>185</span>
+<span class='line-number'>186</span>
+<span class='line-number'>187</span>
+<span class='line-number'>188</span>
+<span class='line-number'>189</span>
+<span class='line-number'>190</span>
+<span class='line-number'>191</span>
+<span class='line-number'>192</span>
+<span class='line-number'>193</span>
+<span class='line-number'>194</span>
+<span class='line-number'>195</span>
+<span class='line-number'>196</span>
+<span class='line-number'>197</span>
+<span class='line-number'>198</span>
+<span class='line-number'>199</span>
+<span class='line-number'>200</span>
+<span class='line-number'>201</span>
+<span class='line-number'>202</span>
+<span class='line-number'>203</span>
+<span class='line-number'>204</span>
+<span class='line-number'>205</span>
+<span class='line-number'>206</span>
+<span class='line-number'>207</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>|   .gitignore
+</span><span class='line'>|   .powrc
+</span><span class='line'>|   .rbenv-version
+</span><span class='line'>|   .rvmrc
+</span><span class='line'>|   .slugignore
+</span><span class='line'>|   CHANGELOG.markdown
+</span><span class='line'>|   config.rb
+</span><span class='line'>|   config.ru
+</span><span class='line'>|   Gemfile
+</span><span class='line'>|   Gemfile.lock
+</span><span class='line'>|   infos.txt
+</span><span class='line'>|   Rakefile
+</span><span class='line'>|   README.markdown
+</span><span class='line'>|   _config.yml
+</span><span class='line'>|   
+</span><span class='line'>+---.themes
+</span><span class='line'>|   +---classic
+</span><span class='line'>|       +---sass
+</span><span class='line'>|       |   |   screen.scss
+</span><span class='line'>|       |   |   _base.scss
+</span><span class='line'>|       |   |   _partials.scss
+</span><span class='line'>|       |   |   
+</span><span class='line'>|       |   +---base
+</span><span class='line'>|       |   |       _layout.scss
+</span><span class='line'>|       |   |       _solarized.scss
+</span><span class='line'>|       |   |       _theme.scss
+</span><span class='line'>|       |   |       _typography.scss
+</span><span class='line'>|       |   |       _utilities.scss
+</span><span class='line'>|       |   |       
+</span><span class='line'>|       |   +---custom
+</span><span class='line'>|       |   |       _colors.scss
+</span><span class='line'>|       |   |       _fonts.scss
+</span><span class='line'>|       |   |       _layout.scss
+</span><span class='line'>|       |   |       _styles.scss
+</span><span class='line'>|       |   |       
+</span><span class='line'>|       |   +---partials
+</span><span class='line'>|       |       |   _archive.scss
+</span><span class='line'>|       |       |   _blog.scss
+</span><span class='line'>|       |       |   _footer.scss
+</span><span class='line'>|       |       |   _header.scss
+</span><span class='line'>|       |       |   _navigation.scss
+</span><span class='line'>|       |       |   _sharing.scss
+</span><span class='line'>|       |       |   _sidebar.scss
+</span><span class='line'>|       |       |   _syntax.scss
+</span><span class='line'>|       |       |   
+</span><span class='line'>|       |       +---sidebar
+</span><span class='line'>|       |               _base.scss
+</span><span class='line'>|       |               _delicious.scss
+</span><span class='line'>|       |               _googleplus.scss
+</span><span class='line'>|       |               _pinboard.scss
+</span><span class='line'>|       |               _twitter.scss
+</span><span class='line'>|       |               
+</span><span class='line'>|       +---source
+</span><span class='line'>|           |   atom.xml
+</span><span class='line'>|           |   favicon.png
+</span><span class='line'>|           |   index.html
+</span><span class='line'>|           |   
+</span><span class='line'>|           +---assets
+</span><span class='line'>|           |   +---jwplayer
+</span><span class='line'>|           |       |   player.swf
+</span><span class='line'>|           |       |   
+</span><span class='line'>|           |       +---glow
+</span><span class='line'>|           |           |   glow.xml
+</span><span class='line'>|           |           |   
+</span><span class='line'>|           |           +---controlbar
+</span><span class='line'>|           |           |       background.png
+</span><span class='line'>|           |           |       blankButton.png
+</span><span class='line'>|           |           |       divider.png
+</span><span class='line'>|           |           |       fullscreenButton.png
+</span><span class='line'>|           |           |       fullscreenButtonOver.png
+</span><span class='line'>|           |           |       muteButton.png
+</span><span class='line'>|           |           |       muteButtonOver.png
+</span><span class='line'>|           |           |       normalscreenButton.png
+</span><span class='line'>|           |           |       normalscreenButtonOver.png
+</span><span class='line'>|           |           |       pauseButton.png
+</span><span class='line'>|           |           |       pauseButtonOver.png
+</span><span class='line'>|           |           |       playButton.png
+</span><span class='line'>|           |           |       playButtonOver.png
+</span><span class='line'>|           |           |       timeSliderBuffer.png
+</span><span class='line'>|           |           |       timeSliderCapLeft.png
+</span><span class='line'>|           |           |       timeSliderCapRight.png
+</span><span class='line'>|           |           |       timeSliderProgress.png
+</span><span class='line'>|           |           |       timeSliderRail.png
+</span><span class='line'>|           |           |       unmuteButton.png
+</span><span class='line'>|           |           |       unmuteButtonOver.png
+</span><span class='line'>|           |           |       
+</span><span class='line'>|           |           +---display
+</span><span class='line'>|           |           |       background.png
+</span><span class='line'>|           |           |       bufferIcon.png
+</span><span class='line'>|           |           |       muteIcon.png
+</span><span class='line'>|           |           |       playIcon.png
+</span><span class='line'>|           |           |       
+</span><span class='line'>|           |           +---dock
+</span><span class='line'>|           |           |       button.png
+</span><span class='line'>|           |           |       
+</span><span class='line'>|           |           +---playlist
+</span><span class='line'>|           |           |       item.png
+</span><span class='line'>|           |           |       itemOver.png
+</span><span class='line'>|           |           |       sliderCapBottom.png
+</span><span class='line'>|           |           |       sliderCapTop.png
+</span><span class='line'>|           |           |       sliderRail.png
+</span><span class='line'>|           |           |       sliderThumb.png
+</span><span class='line'>|           |           |       
+</span><span class='line'>|           |           +---sharing
+</span><span class='line'>|           |                   embedIcon.png
+</span><span class='line'>|           |                   embedScreen.png
+</span><span class='line'>|           |                   shareIcon.png
+</span><span class='line'>|           |                   shareScreen.png
+</span><span class='line'>|           |                   
+</span><span class='line'>|           +---blog
+</span><span class='line'>|           |   +---archives
+</span><span class='line'>|           |           index.html
+</span><span class='line'>|           |           
+</span><span class='line'>|           +---images
+</span><span class='line'>|           |       bird_32_gray.png
+</span><span class='line'>|           |       bird_32_gray_fail.png
+</span><span class='line'>|           |       code_bg.png
+</span><span class='line'>|           |       dotted-border.png
+</span><span class='line'>|           |       email.png
+</span><span class='line'>|           |       line-tile.png
+</span><span class='line'>|           |       noise.png
+</span><span class='line'>|           |       rss.png
+</span><span class='line'>|           |       search.png
+</span><span class='line'>|           |       
+</span><span class='line'>|           +---javascripts
+</span><span class='line'>|           |   |   ender.js
+</span><span class='line'>|           |   |   github.js
+</span><span class='line'>|           |   |   modernizr-2.0.js
+</span><span class='line'>|           |   |   octopress.js
+</span><span class='line'>|           |   |   pinboard.js
+</span><span class='line'>|           |   |   twitter.js
+</span><span class='line'>|           |   |   
+</span><span class='line'>|           |   +---libs
+</span><span class='line'>|           |           ender.js
+</span><span class='line'>|           |           jXHR.js
+</span><span class='line'>|           |           swfobject-dynamic.js
+</span><span class='line'>|           |           
+</span><span class='line'>|           +---_includes
+</span><span class='line'>|           |   |   after_footer.html
+</span><span class='line'>|           |   |   archive_post.html
+</span><span class='line'>|           |   |   article.html
+</span><span class='line'>|           |   |   disqus.html
+</span><span class='line'>|           |   |   facebook_like.html
+</span><span class='line'>|           |   |   footer.html
+</span><span class='line'>|           |   |   google_analytics.html
+</span><span class='line'>|           |   |   google_plus_one.html
+</span><span class='line'>|           |   |   head.html
+</span><span class='line'>|           |   |   header.html
+</span><span class='line'>|           |   |   navigation.html
+</span><span class='line'>|           |   |   twitter_sharing.html
+</span><span class='line'>|           |   |   
+</span><span class='line'>|           |   +---asides
+</span><span class='line'>|           |   |       delicious.html
+</span><span class='line'>|           |   |       github.html
+</span><span class='line'>|           |   |       googleplus.html
+</span><span class='line'>|           |   |       pinboard.html
+</span><span class='line'>|           |   |       recent_posts.html
+</span><span class='line'>|           |   |       twitter.html
+</span><span class='line'>|           |   |       
+</span><span class='line'>|           |   +---custom
+</span><span class='line'>|           |   |   |   after_footer.html
+</span><span class='line'>|           |   |   |   category_feed.xml
+</span><span class='line'>|           |   |   |   footer.html
+</span><span class='line'>|           |   |   |   head.html
+</span><span class='line'>|           |   |   |   header.html
+</span><span class='line'>|           |   |   |   navigation.html
+</span><span class='line'>|           |   |   |   
+</span><span class='line'>|           |   |   +---asides
+</span><span class='line'>|           |   |           about.html
+</span><span class='line'>|           |   |           
+</span><span class='line'>|           |   +---post
+</span><span class='line'>|           |           author.html
+</span><span class='line'>|           |           categories.html
+</span><span class='line'>|           |           date.html
+</span><span class='line'>|           |           disqus_thread.html
+</span><span class='line'>|           |           sharing.html
+</span><span class='line'>|           |           
+</span><span class='line'>|           +---_layouts
+</span><span class='line'>|                   category_index.html
+</span><span class='line'>|                   default.html
+</span><span class='line'>|                   page.html
+</span><span class='line'>|                   post.html
+</span><span class='line'>|                   
+</span><span class='line'>+---plugins
+</span><span class='line'>        backtick_code_block.rb
+</span><span class='line'>        blockquote.rb
+</span><span class='line'>        category_generator.rb
+</span><span class='line'>        code_block.rb
+</span><span class='line'>        date.rb
+</span><span class='line'>        gist_tag.rb
+</span><span class='line'>        haml.rb
+</span><span class='line'>        image_tag.rb
+</span><span class='line'>        include_array.rb
+</span><span class='line'>        include_code.rb
+</span><span class='line'>        jsfiddle.rb
+</span><span class='line'>        octopress_filters.rb
+</span><span class='line'>        pagination.rb
+</span><span class='line'>        post_filters.rb
+</span><span class='line'>        preview_unpublished.rb
+</span><span class='line'>        pullquote.rb
+</span><span class='line'>        pygments_code.rb
+</span><span class='line'>        raw.rb
+</span><span class='line'>        render_partial.rb
+</span><span class='line'>        rubypants.rb
+</span><span class='line'>        sitemap_generator.rb
+</span><span class='line'>        titlecase.rb
+</span><span class='line'>        video_tag.rb</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<p>Nous allons maintenant créer notre thème rendez-vous dans le prochain article</p>
 
 </div>
   
