@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: octopress - {A:D}</title>
+  <title>{A:D}</title>
   <meta name="author" content="Anthony DURAND">
 
   
-  <meta name="description" content="Category: octopress">
+  <meta name="description" content=" Archives ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://anthonydurand.github.comcategories/octopress/">
+  <link rel="canonical" href="http://anthonydurand.github.com/.old">
   <link href="/favicon.ico" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -67,82 +67,20 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div>
-<article role="article">
+      <div class="blog-index">
   
-  <header>
-    <h1 class="entry-title">Category: octopress</h1>
+  
+  <div class="pagination">
     
-  </header>
-  
-  <div id="blog-archives" class="category">
-
-
-
-  
-  <h2>2012</h2>
-
-<article>
-  
-<h1><a href="/4-la-creation-du-theme">4 - La cr&eacute;ation du th&grave;me</a></h1>
-<time datetime="2012-08-07T23:17:00+02:00" pubdate><span class='month'>Aug</span> <span class='day'>07</span> <span class='year'>2012</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/categories/octopress/'>octopress</a>, <a class='category' href='/categories/tuto/'>tuto</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/3-les-donnees-de-theme">3 - Les donn&eacute;es de th&egrave;me</a></h1>
-<time datetime="2012-08-06T21:00:00+02:00" pubdate><span class='month'>Aug</span> <span class='day'>06</span> <span class='year'>2012</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/categories/octopress/'>octopress</a>, <a class='category' href='/categories/tuto/'>tuto</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/2-structure-generale">2 - Structure g&eacute;n&eacute;rale</a></h1>
-<time datetime="2012-08-06T21:00:00+02:00" pubdate><span class='month'>Aug</span> <span class='day'>06</span> <span class='year'>2012</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/categories/octopress/'>octopress</a>, <a class='category' href='/categories/tuto/'>tuto</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/1-la-base">1 - La base</a></h1>
-<time datetime="2012-08-06T21:00:00+02:00" pubdate><span class='month'>Aug</span> <span class='day'>06</span> <span class='year'>2012</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/categories/octopress/'>octopress</a>, <a class='category' href='/categories/tuto/'>tuto</a></span>
-</footer>
-
-
-</article>
-
+    <a href="/archives">Archives</a>
+    
+  </div>
 </div>
-
+<aside class="sidebar">
   
-</article>
-
-</div>
-
+    
+  
+</aside>
 
     </div>
   </div>
