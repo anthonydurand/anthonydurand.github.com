@@ -119,8 +119,8 @@
 
 
 
-<figure class='code'><figcaption><span>Fichier créé juste après la création d&#8217;octopress </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span>Fichier créé juste après la création d&#8217;octopress  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -219,105 +219,106 @@
 <span class='line-number'>97</span>
 <span class='line-number'>98</span>
 <span class='line-number'>99</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'># ----------------------- #
-</span><span class='line'>#      Main Configs       #
-</span><span class='line'># ----------------------- #
+</pre></td><td class='code'><pre><code class='yaml'><span class='line'><span class="c1"># ----------------------- #</span>
+</span><span class='line'><span class="c1">#      Main Configs       #</span>
+</span><span class='line'><span class="c1"># ----------------------- #</span>
 </span><span class='line'>
-</span><span class='line'>url: http://yoursite.com
-</span><span class='line'>title: My Octopress Blog
-</span><span class='line'>subtitle: A blogging framework for hackers.
-</span><span class='line'>author: Your Name
-</span><span class='line'>simple_search: http://google.com/search
-</span><span class='line'>description:
+</span><span class='line'><span class="l-Scalar-Plain">url</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">http://yoursite.com</span>
+</span><span class='line'><span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">My Octopress Blog</span>
+</span><span class='line'><span class="l-Scalar-Plain">subtitle</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">A blogging framework for hackers.</span>
+</span><span class='line'><span class="l-Scalar-Plain">author</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Your Name</span>
+</span><span class='line'><span class="l-Scalar-Plain">simple_search</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">http://google.com/search</span>
+</span><span class='line'><span class="l-Scalar-Plain">description</span><span class="p-Indicator">:</span>
 </span><span class='line'>
-</span><span class='line'># Default date format is "ordinal" (resulting in "July 22nd 2007")
-</span><span class='line'># You can customize the format as defined in
-</span><span class='line'># http://www.ruby-doc.org/core-1.9.2/Time.html#method-i-strftime
-</span><span class='line'># Additionally, %o will give you the ordinal representation of the day
-</span><span class='line'>date_format: "ordinal"
+</span><span class='line'><span class="c1"># Default date format is &quot;ordinal&quot; (resulting in &quot;July 22nd 2007&quot;)</span>
+</span><span class='line'><span class="c1"># You can customize the format as defined in</span>
+</span><span class='line'><span class="c1"># http://www.ruby-doc.org/core-1.9.2/Time.html#method-i-strftime</span>
+</span><span class='line'><span class="c1"># Additionally, %o will give you the ordinal representation of the day</span>
+</span><span class='line'><span class="l-Scalar-Plain">date_format</span><span class="p-Indicator">:</span> <span class="s">&quot;ordinal&quot;</span>
 </span><span class='line'>
-</span><span class='line'># RSS / Email (optional) subscription links (change if using something like Feedburner)
-</span><span class='line'>subscribe_rss: /atom.xml
-</span><span class='line'>subscribe_email:
-</span><span class='line'># RSS feeds can list your email address if you like
-</span><span class='line'>email:
+</span><span class='line'><span class="c1"># RSS / Email (optional) subscription links (change if using something like Feedburner)</span>
+</span><span class='line'><span class="l-Scalar-Plain">subscribe_rss</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">/atom.xml</span>
+</span><span class='line'><span class="l-Scalar-Plain">subscribe_email</span><span class="p-Indicator">:</span>
+</span><span class='line'><span class="c1"># RSS feeds can list your email address if you like</span>
+</span><span class='line'><span class="l-Scalar-Plain">email</span><span class="p-Indicator">:</span>
 </span><span class='line'>
-</span><span class='line'># ----------------------- #
-</span><span class='line'>#    Jekyll & Plugins     #
-</span><span class='line'># ----------------------- #
+</span><span class='line'><span class="c1"># ----------------------- #</span>
+</span><span class='line'><span class="c1">#    Jekyll &amp; Plugins     #</span>
+</span><span class='line'><span class="c1"># ----------------------- #</span>
 </span><span class='line'>
-</span><span class='line'># If publishing to a subdirectory as in http://site.com/project set 'root: /project'
-</span><span class='line'>root: /
-</span><span class='line'>permalink: /blog/:year/:month/:day/:title/
-</span><span class='line'>source: source
-</span><span class='line'>destination: public
-</span><span class='line'>plugins: plugins
-</span><span class='line'>code_dir: downloads/code
-</span><span class='line'>category_dir: blog/categories
-</span><span class='line'>markdown: rdiscount
-</span><span class='line'>pygments: false # default python pygments have been replaced by pygments.rb
+</span><span class='line'><span class="c1"># If publishing to a subdirectory as in http://site.com/project set &#39;root: /project&#39;</span>
+</span><span class='line'><span class="l-Scalar-Plain">root</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">/</span>
+</span><span class='line'><span class="l-Scalar-Plain">permalink</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">/blog/:year/:month/:day/:title/</span>
+</span><span class='line'><span class="l-Scalar-Plain">source</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">source</span>
+</span><span class='line'><span class="l-Scalar-Plain">destination</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">public</span>
+</span><span class='line'><span class="l-Scalar-Plain">plugins</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">plugins</span>
+</span><span class='line'><span class="l-Scalar-Plain">code_dir</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">downloads/code</span>
+</span><span class='line'><span class="l-Scalar-Plain">category_dir</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">blog/categories</span>
+</span><span class='line'><span class="l-Scalar-Plain">markdown</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">rdiscount</span>
+</span><span class='line'><span class="l-Scalar-Plain">pygments</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">false</span> <span class="c1"># default python pygments have been replaced by pygments.rb</span>
 </span><span class='line'>
-</span><span class='line'>paginate: 10          # Posts per page on the blog index
-</span><span class='line'>pagination_dir: blog  # Directory base for pagination URLs eg. /blog/page/2/
-</span><span class='line'>recent_posts: 5       # Posts in the sidebar Recent Posts section
-</span><span class='line'>excerpt_link: "Read on &rarr;"  # "Continue reading" link text at the bottom of excerpted articles
+</span><span class='line'><span class="l-Scalar-Plain">paginate</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">10</span>          <span class="c1"># Posts per page on the blog index</span>
+</span><span class='line'><span class="l-Scalar-Plain">pagination_dir</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">blog</span>  <span class="c1"># Directory base for pagination URLs eg. /blog/page/2/</span>
+</span><span class='line'><span class="l-Scalar-Plain">recent_posts</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">5</span>       <span class="c1"># Posts in the sidebar Recent Posts section</span>
+</span><span class='line'><span class="l-Scalar-Plain">excerpt_link</span><span class="p-Indicator">:</span> <span class="s">&quot;Read</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">&amp;rarr;&quot;</span>  <span class="c1"># &quot;Continue reading&quot; link text at the bottom of excerpted articles</span>
 </span><span class='line'>
-</span><span class='line'>titlecase: true       # Converts page and post titles to titlecase
+</span><span class='line'><span class="l-Scalar-Plain">titlecase</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>       <span class="c1"># Converts page and post titles to titlecase</span>
 </span><span class='line'>
-</span><span class='line'># list each of the sidebar modules you want to include, in the order you want them to appear.
-</span><span class='line'># To add custom asides, create files in /source/_includes/custom/asides/ and add them to the list like 'custom/asides/custom_aside_name.html'
-</span><span class='line'>default_asides: [asides/recent_posts.html, asides/github.html, asides/twitter.html, asides/delicious.html, asides/pinboard.html, asides/googleplus.html]
+</span><span class='line'><span class="c1"># list each of the sidebar modules you want to include, in the order you want them to appear.</span>
+</span><span class='line'><span class="c1"># To add custom asides, create files in /source/_includes/custom/asides/ and add them to the list like &#39;custom/asides/custom_aside_name.html&#39;</span>
+</span><span class='line'><span class="l-Scalar-Plain">default_asides</span><span class="p-Indicator">:</span> <span class="p-Indicator">[</span><span class="nv">asides/recent_posts.html</span><span class="p-Indicator">,</span> <span class="nv">asides/github.html</span><span class="p-Indicator">,</span> <span class="nv">asides/twitter.html</span><span class="p-Indicator">,</span> <span class="nv">asides/delicious.html</span><span class="p-Indicator">,</span> <span class="nv">asides/pinboard.html</span><span class="p-Indicator">,</span> <span class="nv">asides/googleplus.html</span><span class="p-Indicator">]</span>
 </span><span class='line'>
-</span><span class='line'># Each layout uses the default asides, but they can have their own asides instead. Simply uncomment the lines below
-</span><span class='line'># and add an array with the asides you want to use.
-</span><span class='line'># blog_index_asides:
-</span><span class='line'># post_asides:
-</span><span class='line'># page_asides:
+</span><span class='line'><span class="c1"># Each layout uses the default asides, but they can have their own asides instead. Simply uncomment the lines below</span>
+</span><span class='line'><span class="c1"># and add an array with the asides you want to use.</span>
+</span><span class='line'><span class="c1"># blog_index_asides:</span>
+</span><span class='line'><span class="c1"># post_asides:</span>
+</span><span class='line'><span class="c1"># page_asides:</span>
 </span><span class='line'>
-</span><span class='line'># ----------------------- #
-</span><span class='line'>#   3rd Party Settings    #
-</span><span class='line'># ----------------------- #
+</span><span class='line'><span class="c1"># ----------------------- #</span>
+</span><span class='line'><span class="c1">#   3rd Party Settings    #</span>
+</span><span class='line'><span class="c1"># ----------------------- #</span>
 </span><span class='line'>
-</span><span class='line'># Github repositories
-</span><span class='line'>github_user:
-</span><span class='line'>github_repo_count: 0
-</span><span class='line'>github_show_profile_link: true
-</span><span class='line'>github_skip_forks: true
+</span><span class='line'><span class="c1"># Github repositories</span>
+</span><span class='line'><span class="l-Scalar-Plain">github_user</span><span class="p-Indicator">:</span>
+</span><span class='line'><span class="l-Scalar-Plain">github_repo_count</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">0</span>
+</span><span class='line'><span class="l-Scalar-Plain">github_show_profile_link</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+</span><span class='line'><span class="l-Scalar-Plain">github_skip_forks</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
 </span><span class='line'>
-</span><span class='line'># Twitter
-</span><span class='line'>twitter_user:
-</span><span class='line'>twitter_tweet_count: 4
-</span><span class='line'>twitter_show_replies: false
-</span><span class='line'>twitter_follow_button: true
-</span><span class='line'>twitter_show_follower_count: false
-</span><span class='line'>twitter_tweet_button: true
+</span><span class='line'><span class="c1"># Twitter</span>
+</span><span class='line'><span class="l-Scalar-Plain">twitter_user</span><span class="p-Indicator">:</span>
+</span><span class='line'><span class="l-Scalar-Plain">twitter_tweet_count</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">4</span>
+</span><span class='line'><span class="l-Scalar-Plain">twitter_show_replies</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">false</span>
+</span><span class='line'><span class="l-Scalar-Plain">twitter_follow_button</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+</span><span class='line'><span class="l-Scalar-Plain">twitter_show_follower_count</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">false</span>
+</span><span class='line'><span class="l-Scalar-Plain">twitter_tweet_button</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
 </span><span class='line'>
-</span><span class='line'># Google +1
-</span><span class='line'>google_plus_one: false
-</span><span class='line'>google_plus_one_size: medium
+</span><span class='line'><span class="c1"># Google +1</span>
+</span><span class='line'><span class="l-Scalar-Plain">google_plus_one</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">false</span>
+</span><span class='line'><span class="l-Scalar-Plain">google_plus_one_size</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">medium</span>
 </span><span class='line'>
-</span><span class='line'># Google Plus Profile
-</span><span class='line'># Hidden: No visible button, just add author information to search results
-</span><span class='line'>googleplus_user:
-</span><span class='line'>googleplus_hidden: false
+</span><span class='line'><span class="c1"># Google Plus Profile</span>
+</span><span class='line'><span class="c1"># Hidden: No visible button, just add author information to search results</span>
+</span><span class='line'><span class="l-Scalar-Plain">googleplus_user</span><span class="p-Indicator">:</span>
+</span><span class='line'><span class="l-Scalar-Plain">googleplus_hidden</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">false</span>
 </span><span class='line'>
-</span><span class='line'># Pinboard
-</span><span class='line'>pinboard_user:
-</span><span class='line'>pinboard_count: 3
+</span><span class='line'><span class="c1"># Pinboard</span>
+</span><span class='line'><span class="l-Scalar-Plain">pinboard_user</span><span class="p-Indicator">:</span>
+</span><span class='line'><span class="l-Scalar-Plain">pinboard_count</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">3</span>
 </span><span class='line'>
-</span><span class='line'># Delicious
-</span><span class='line'>delicious_user:
-</span><span class='line'>delicious_count: 3
+</span><span class='line'><span class="c1"># Delicious</span>
+</span><span class='line'><span class="l-Scalar-Plain">delicious_user</span><span class="p-Indicator">:</span>
+</span><span class='line'><span class="l-Scalar-Plain">delicious_count</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">3</span>
 </span><span class='line'>
-</span><span class='line'># Disqus Comments
-</span><span class='line'>disqus_short_name:
-</span><span class='line'>disqus_show_comment_count: false
+</span><span class='line'><span class="c1"># Disqus Comments</span>
+</span><span class='line'><span class="l-Scalar-Plain">disqus_short_name</span><span class="p-Indicator">:</span>
+</span><span class='line'><span class="l-Scalar-Plain">disqus_show_comment_count</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">false</span>
 </span><span class='line'>
-</span><span class='line'># Google Analytics
-</span><span class='line'>google_analytics_tracking_id:
+</span><span class='line'><span class="c1"># Google Analytics</span>
+</span><span class='line'><span class="l-Scalar-Plain">google_analytics_tracking_id</span><span class="p-Indicator">:</span>
 </span><span class='line'>
-</span><span class='line'># Facebook Like
-</span><span class='line'>facebook_like: false</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'><span class="c1"># Facebook Like</span>
+</span><span class='line'><span class="l-Scalar-Plain">facebook_like</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">false</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 
@@ -338,7 +339,7 @@
 
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -360,28 +361,29 @@
 <span class='line-number'>20</span>
 <span class='line-number'>21</span>
 <span class='line-number'>22</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'># ----------------------- #
-</span><span class='line'>#      Main Configs       #
-</span><span class='line'># ----------------------- #
+</pre></td><td class='code'><pre><code class='yaml'><span class='line'><span class="c1"># ----------------------- #</span>
+</span><span class='line'><span class="c1">#      Main Configs       #</span>
+</span><span class='line'><span class="c1"># ----------------------- #</span>
 </span><span class='line'>
-</span><span class='line'>url: http://yoursite.com
-</span><span class='line'>title: My Octopress Blog
-</span><span class='line'>subtitle: A blogging framework for hackers.
-</span><span class='line'>author: Your Name
-</span><span class='line'>simple_search: http://google.com/search
-</span><span class='line'>description:
+</span><span class='line'><span class="l-Scalar-Plain">url</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">http://yoursite.com</span>
+</span><span class='line'><span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">My Octopress Blog</span>
+</span><span class='line'><span class="l-Scalar-Plain">subtitle</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">A blogging framework for hackers.</span>
+</span><span class='line'><span class="l-Scalar-Plain">author</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Your Name</span>
+</span><span class='line'><span class="l-Scalar-Plain">simple_search</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">http://google.com/search</span>
+</span><span class='line'><span class="l-Scalar-Plain">description</span><span class="p-Indicator">:</span>
 </span><span class='line'>
-</span><span class='line'># Default date format is "ordinal" (resulting in "July 22nd 2007")
-</span><span class='line'># You can customize the format as defined in
-</span><span class='line'># http://www.ruby-doc.org/core-1.9.2/Time.html#method-i-strftime
-</span><span class='line'># Additionally, %o will give you the ordinal representation of the day
-</span><span class='line'>date_format: "ordinal"
+</span><span class='line'><span class="c1"># Default date format is &quot;ordinal&quot; (resulting in &quot;July 22nd 2007&quot;)</span>
+</span><span class='line'><span class="c1"># You can customize the format as defined in</span>
+</span><span class='line'><span class="c1"># http://www.ruby-doc.org/core-1.9.2/Time.html#method-i-strftime</span>
+</span><span class='line'><span class="c1"># Additionally, %o will give you the ordinal representation of the day</span>
+</span><span class='line'><span class="l-Scalar-Plain">date_format</span><span class="p-Indicator">:</span> <span class="s">&quot;ordinal&quot;</span>
 </span><span class='line'>
-</span><span class='line'># RSS / Email (optional) subscription links (change if using something like Feedburner)
-</span><span class='line'>subscribe_rss: /atom.xml
-</span><span class='line'>subscribe_email:
-</span><span class='line'># RSS feeds can list your email address if you like
-</span><span class='line'>email:</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'><span class="c1"># RSS / Email (optional) subscription links (change if using something like Feedburner)</span>
+</span><span class='line'><span class="l-Scalar-Plain">subscribe_rss</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">/atom.xml</span>
+</span><span class='line'><span class="l-Scalar-Plain">subscribe_email</span><span class="p-Indicator">:</span>
+</span><span class='line'><span class="c1"># RSS feeds can list your email address if you like</span>
+</span><span class='line'><span class="l-Scalar-Plain">email</span><span class="p-Indicator">:</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 
@@ -465,7 +467,7 @@
 
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -473,14 +475,15 @@
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
 <span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;footer class="footer">
-</span><span class='line'>  &lt;span class="author">2012 - {% if site.author %} {{ site.author }} {% endif %}&lt;/span>
-</span><span class='line'>  &lt;aside class="offsite-links">
-</span><span class='line'>    &lt;a class="twitter-link" href="http://www.twitter.com/_">Twitter&lt;/a> /
-</span><span class='line'>    &lt;a class="github-link" href="https://github.com/_">GitHub&lt;/a> / 
-</span><span class='line'>    &lt;a class="rss-link" href="/feed">RSS&lt;/a>
-</span><span class='line'>  &lt;/aside>
-</span><span class='line'>&lt;/footer></span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">&quot;footer&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;author&quot;</span><span class="nt">&gt;</span>2012 - {% if site.author %} {{ site.author }} {% endif %}<span class="nt">&lt;/span&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;aside</span> <span class="na">class=</span><span class="s">&quot;offsite-links&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;twitter-link&quot;</span> <span class="na">href=</span><span class="s">&quot;http://www.twitter.com/_&quot;</span><span class="nt">&gt;</span>Twitter<span class="nt">&lt;/a&gt;</span> /
+</span><span class='line'>    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;github-link&quot;</span> <span class="na">href=</span><span class="s">&quot;https://github.com/_&quot;</span><span class="nt">&gt;</span>GitHub<span class="nt">&lt;/a&gt;</span> /
+</span><span class='line'>    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;rss-link&quot;</span> <span class="na">href=</span><span class="s">&quot;/feed&quot;</span><span class="nt">&gt;</span>RSS<span class="nt">&lt;/a&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/aside&gt;</span>
+</span><span class='line'><span class="nt">&lt;/footer&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 

@@ -381,7 +381,35 @@
 <h3><code>home.html</code></h3>
 
 
-<p>Liquid error: No such file or directory - python -c &#8220;import sys; print sys.executable&#8221;</p>
+
+
+<figure class='code'><figcaption><span>Contenu de home.html  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span><span class='line'><span class="nt">&lt;html&gt;</span>
+</span><span class='line'>  {%include head.html %}
+</span><span class='line'>  <span class="nt">&lt;body&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;wrapper&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>      {% include nav.html %}
+</span><span class='line'>      {{ content }}
+</span><span class='line'>      {% include footer.html %}
+</span><span class='line'>    <span class="nt">&lt;/div&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/body&gt;</span>
+</span><span class='line'><span class="nt">&lt;/html&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
 
 <p>Vous remarquez donc un doctype HTML5 et une structure de site standard avec des include. Ces include signifient qu&#8217;il faut inclure des fichiers HTML se situant dans le dossier _includes. Rien de bien compliqué ! Je lui demande donc de récupérer :</p>
 
@@ -434,8 +462,8 @@
 
 <p> <p>d&#8217;un document html standard</p></p>
 
-<figure class='code'><figcaption><span>Contenu de head </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span>Contenu de head  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -448,19 +476,22 @@
 <span class='line-number'>11</span>
 <span class='line-number'>12</span>
 <span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;head>
-</span><span class='line'>  &lt;meta charset="utf-8">
-</span><span class='line'>  &lt;title> {% if page.title %} {{ page.title }} | {% endif %}Anthony DURAND&lt;/title>
-</span><span class='line'>  &lt;meta name="description" content="">
-</span><span class='line'>  &lt;meta name="author" content="{% if site.author %} {{ site.author }} {% endif %}", "{% if site.twitter_user %} {{ site.twitter_user }} | {% endif %}">
-</span><span class='line'>  &lt;meta name="viewport" content="width=device-width, initial-scale=1">
-</span><span class='line'>  &lt;meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-</span><span class='line'>  &lt;meta property="twitter:account_id" content="" />
-</span><span class='line'>  &lt;link rel="shortcut icon" type="image/x-icon" href="favicon.png">
-</span><span class='line'>  &lt;link rel="stylesheet" href="screen.css" />
-</span><span class='line'>  &lt;!--[if lt IE 9]>&lt;script src="http://html5shim.googlecode.com/svn/trunk/html5.js">&lt;/script>&lt;![endif]-->
-</span><span class='line'>  &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">&lt;/script>
-</span><span class='line'>&lt;/head></span></code></pre></td></tr></table></div></figure>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'>
+</span><span class='line'><span class="nt">&lt;head&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">&quot;utf-8&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;title&gt;</span> {% if page.title %} {{ page.title }} | {% endif %}Anthony DURAND<span class="nt">&lt;/title&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;description&quot;</span> <span class="na">content=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;author&quot;</span> <span class="na">content=</span><span class="s">&quot;{% if site.author %} {{ site.author }} {% endif %}&quot;</span><span class="err">,</span> <span class="err">&quot;{%</span> <span class="na">if</span> <span class="na">site</span><span class="err">.</span><span class="na">twitter_user</span> <span class="err">%}</span> <span class="err">{{</span> <span class="na">site</span><span class="err">.</span><span class="na">twitter_user</span> <span class="err">}}</span> <span class="err">|</span> <span class="err">{%</span> <span class="na">endif</span> <span class="err">%}&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content=</span><span class="s">&quot;width=device-width, initial-scale=1&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content=</span><span class="s">&quot;width=device-width, initial-scale=1, maximum-scale=1&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">&quot;twitter:account_id&quot;</span> <span class="na">content=</span><span class="s">&quot;&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;shortcut icon&quot;</span> <span class="na">type=</span><span class="s">&quot;image/x-icon&quot;</span> <span class="na">href=</span><span class="s">&quot;favicon.png&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;screen.css&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'>  <span class="c">&lt;!--[if lt IE 9]&gt;&lt;script src=&quot;http://html5shim.googlecode.com/svn/trunk/html5.js&quot;&gt;&lt;/script&gt;&lt;![endif]--&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span><span class='line'><span class="nt">&lt;/head&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 
@@ -481,13 +512,14 @@
 
 
 
-<figure class='code'><figcaption><span>Exemple d&#8217;accolades </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span>Exemple d&#8217;accolades  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;title> {% if page.title %} {{ page.title }} | {% endif %}Anthony DURAND&lt;/title>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;title&gt;</span> {% if page.title %} {{ page.title }} | {% endif %}Anthony DURAND<span class="nt">&lt;/title&gt;</span>
 </span><span class='line'>../..
-</span><span class='line'>&lt;meta name="author" content="{% if site.author %} {{ site.author }} {% endif %}", "{% if site.twitter_user %} {{ site.twitter_user }} | {% endif %}"></span></code></pre></td></tr></table></div></figure>
+</span><span class='line'><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;author&quot;</span> <span class="na">content=</span><span class="s">&quot;{% if site.author %} {{ site.author }} {% endif %}&quot;</span><span class="err">,</span> <span class="err">&quot;{%</span> <span class="na">if</span> <span class="na">site</span><span class="err">.</span><span class="na">twitter_user</span> <span class="err">%}</span> <span class="err">{{</span> <span class="na">site</span><span class="err">.</span><span class="na">twitter_user</span> <span class="err">}}</span> <span class="err">|</span> <span class="err">{%</span> <span class="na">endif</span> <span class="err">%}&quot;</span><span class="nt">&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 
@@ -524,7 +556,8 @@
 
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span>nav.html  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -536,18 +569,19 @@
 <span class='line-number'>10</span>
 <span class='line-number'>11</span>
 <span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;nav>
-</span><span class='line'>  &lt;a id="logo" href="/">
-</span><span class='line'>    &lt;hgroup>
-</span><span class='line'>        &lt;h1>&lt;\>&lt;/h1>
-</span><span class='line'>        &lt;h2>{{ site.subtitle }}&lt;/h2>
-</span><span class='line'>    &lt;/hgroup>
-</span><span class='line'>  &lt;/a>
-</span><span class='line'>  &lt;ul class="navigation">
-</span><span class='line'>    &lt;li>&lt;a href="/">Accueil&lt;/a>&lt;/li>
-</span><span class='line'>    &lt;li>&lt;a href="/">A propos&lt;/a>&lt;/li>
-</span><span class='line'>  &lt;/ul>
-</span><span class='line'>&lt;/nav></span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;nav&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;a</span> <span class="na">id=</span><span class="s">&quot;logo&quot;</span> <span class="na">href=</span><span class="s">&quot;/&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;hgroup&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;h1&gt;</span><span class="err">&lt;</span>\&gt;<span class="nt">&lt;/h1&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;h2&gt;</span>{{ site.subtitle }}<span class="nt">&lt;/h2&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/hgroup&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/a&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;navigation&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/&quot;</span><span class="nt">&gt;</span>Accueil<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/&quot;</span><span class="nt">&gt;</span>A propos<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/ul&gt;</span>
+</span><span class='line'><span class="nt">&lt;/nav&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 
@@ -563,7 +597,8 @@
 
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span>footer.html  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -571,14 +606,15 @@
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
 <span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;footer class="footer">
-</span><span class='line'>  &lt;span class="author">2012 - {% if site.author %} {{ site.author }} {% endif %}&lt;/span>
-</span><span class='line'>  &lt;aside class="offsite-links">
-</span><span class='line'>    &lt;a class="twitter-link" href="http://www.twitter.com/_">Twitter&lt;/a> /
-</span><span class='line'>    &lt;a class="github-link" href="https://github.com/_">GitHub&lt;/a> / 
-</span><span class='line'>    &lt;a class="rss-link" href="/feed">RSS&lt;/a>
-</span><span class='line'>  &lt;/aside>
-</span><span class='line'>&lt;/footer></span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">&quot;footer&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;author&quot;</span><span class="nt">&gt;</span>2012 - {% if site.author %} {{ site.author }} {% endif %}<span class="nt">&lt;/span&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;aside</span> <span class="na">class=</span><span class="s">&quot;offsite-links&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;twitter-link&quot;</span> <span class="na">href=</span><span class="s">&quot;http://www.twitter.com/_&quot;</span><span class="nt">&gt;</span>Twitter<span class="nt">&lt;/a&gt;</span> /
+</span><span class='line'>    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;github-link&quot;</span> <span class="na">href=</span><span class="s">&quot;https://github.com/_&quot;</span><span class="nt">&gt;</span>GitHub<span class="nt">&lt;/a&gt;</span> /
+</span><span class='line'>    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;rss-link&quot;</span> <span class="na">href=</span><span class="s">&quot;/feed&quot;</span><span class="nt">&gt;</span>RSS<span class="nt">&lt;/a&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/aside&gt;</span>
+</span><span class='line'><span class="nt">&lt;/footer&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 
