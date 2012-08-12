@@ -4,7 +4,7 @@
   <title><![CDATA[{A:D}]]></title>
   <link href="http://anthonydurand.github.com/atom.xml" rel="self"/>
   <link href="http://anthonydurand.github.com/"/>
-  <updated>2012-08-11T18:49:43+02:00</updated>
+  <updated>2012-08-12T15:18:32+02:00</updated>
   <id>http://anthonydurand.github.com/</id>
   <author>
     <name><![CDATA[Anthony DURAND]]></name>
@@ -12,6 +12,122 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Configurer python et pygments sur windows]]></title>
+    <link href="http://anthonydurand.github.com/configurer-python-et-pygments-sur-windows"/>
+    <updated>2012-08-11T23:05:00+02:00</updated>
+    <id>http://anthonydurand.github.com/configurer-python-et-pygments-sur-windows</id>
+    <content type="html"><![CDATA[<p>Si comme moi vous utiliser une environnement de développement sur windows, et que python ne vous dit pas grand chose, vous pouvez avoir les mêmes soucis que ceux que j&#8217;ai rencontré.</p>
+
+<h3>Coloration syntaxique</h3>
+
+<p>Octopress utilise <a href="http://pygments.org/">pygments</a> pour afficher la coloration syntaxique des blocs de code avec les balises</p>
+
+<pre><code>{% codeblock %}
+{% endcodeblock %}
+</code></pre>
+
+<p>ou</p>
+
+<pre><code>{% include_code %}
+</code></pre>
+
+<p>.<br/>
+Par défaut sur windows, Python n&#8217;est pas installé. Si vous n&#8217;installez pas python ni pygments les blocs de code apparaitront mais sans coloration syntaxique. Par contre si vous spécifiez le langage dans le codeblock :</p>
+
+<pre><code>{% codeblock lang:html %}
+</code></pre>
+
+<p>vous aurez un beau message d&#8217;erreur :</p>
+
+<pre><code>Liquid error: No such file or directory - python2.7 -c “import sys; print sys.executable”
+</code></pre>
+
+<p>J&#8217;ai pas mal galéré afin de trouver une solution, mais j&#8217;ai finalement trouvé. Je vous explique en détail le processus ci-dessous.</p>
+
+<h3>Installer Python 2.7</h3>
+
+<ol>
+<li>Récupérer l&#8217;<a href="http://www.python.org/ftp/python/2.7.3/python-2.7.3.msi">installeur 32bits</a> ou l&#8217;<a href="http://www.python.org/ftp/python/2.7.3/python-2.7.3.amd64.msi">installeur 64bits</a></li>
+<li>Installer python au chemin par défaut à savoir <code>C:\python27</code></li>
+</ol>
+
+
+<h3>Créer des variables d&#8217;environnement</h3>
+
+<p>Après l&#8217;installation, il va falloir ajouter aux variables d&#8217;environnement de windows le chemin de <code>C:\python27</code> et de <code>C:\python27\scripts</code> afin de pouvoir installer <a href="http://pygments.org/">pygments</a>.</p>
+
+<h4>Sur windows XP :</h4>
+
+<ol>
+<li>Pour se faire, il faut aller dans &#8220;Panneau de configuration -> Système -> Onglet Avancé -> Variables d&#8217;environnement&#8221;</li>
+<li>Dans la partie &#8220;Variables système&#8221;, cliquez sur &#8220;Nouvelle&#8221;.</li>
+<li>Nom de la variable : PYTHON_HOME</li>
+<li>Valeur de la variable : c:\python27</li>
+</ol>
+
+
+<p><img src="http://anthonydurand.github.com/images/WindowsXP-variables.png" alt="XP-Variable" /></p>
+
+<p>Il faut ensuite ajouter à la variable système <code>path</code> les chemins de <code>C:\python27</code> et de <code>C:\python27\scripts</code>.</p>
+
+<ol>
+<li>On séléctionne <code>path</code>,</li>
+<li>On clique sur modifier,</li>
+<li>à la fin de la valeur déjà inscrite, on ajoute : <code>;%PYTHON_HOME%;%PYTHON_HOME%\scripts</code></li>
+</ol>
+
+
+<p>Attention, les <code>;</code> sont très importants entre chaque valeur du path !</p>
+
+<p><img src="http://anthonydurand.github.com/images/WindowsXP-path.png" alt="XP-path" /></p>
+
+<h4>Sur windows 7 :</h4>
+
+<ol>
+<li>Pour se faire, il faut aller dans &#8220;Panneau de configuration -> Système -> Paramètres système avancés -> Variables d&#8217;environnement&#8221;</li>
+<li>Dans la partie &#8220;Variables système&#8221;, cliquez sur &#8220;Nouvelle&#8221;.</li>
+<li>Nom de la variable : PYTHON_HOME</li>
+<li>Valeur de la variable : c:\python27</li>
+</ol>
+
+
+<p><img src="http://anthonydurand.github.com/images/Windows7-variables.png" alt="7-Variable" /></p>
+
+<p>Il faut ensuite ajouter à la variable système <code>path</code> les chemins de <code>C:\python27</code> et de <code>C:\python27\scripts</code>.</p>
+
+<ol>
+<li>On séléctionne <code>path</code>,</li>
+<li>On clique sur modifier,</li>
+<li>à la fin de la valeur déjà inscrite, on ajoute : <code>;%PYTHON_HOME%;%PYTHON_HOME%\scripts</code></li>
+</ol>
+
+
+<p>Attention, les <code>;</code> sont très importants entre chaque valeur du path !</p>
+
+<p><img src="http://anthonydurand.github.com/images/Windows7-path.png" alt="7-path" /></p>
+
+<h3>Installation de easy_install</h3>
+
+<p>Téléchargeons maintenant le package python <a href="http://pypi.python.org/packages/2.7/s/setuptools/setuptools-0.6c11.win32-py2.7.exe#md5=57e1e64f6b7c7f1d2eddfc9746bbaf20">easy_install</a>, disponible sur cette <a href="http://pypi.python.org/pypi/setuptools#files">page</a> si quelquechose se passait mal.<br/>
+Installez le par défaut.
+Tout devrait bien se passer.</p>
+
+<h3>installation de pygments</h3>
+
+<p>Ouvrez votre console et tapez simplement</p>
+
+<pre><code>easy_install pygments
+</code></pre>
+
+<p>Le package va simplement s&#8217;installer comme une gem ruby.</p>
+
+<p><strong>ET VOILA !</strong></p>
+
+<p>La coloration syntaxique devrait fonctionner normalement sur votre PC sous windows !</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[3 - Les donn&eacute;es de th&egrave;me]]></title>

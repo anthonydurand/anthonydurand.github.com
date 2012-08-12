@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony DURAND">
 
   
-  <meta name="description" content="Bienvenue cher visiteur sur ce modeste blog. Qu&#8217;a t&#8217;il de particulier me direz-vous ? Et bien, ce blog est hébergé sur GitHub, en &hellip;">
+  <meta name="description" content="Informations préalables Pour ce tuto voici la configuration que j&#8217;ai : OS: Windows 7 pro 64bits Editeur: Sublime text 2 Console: Console2 Pré &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -75,7 +75,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/bienvenue-sur-ce-blog">Bienvenue sur ce blog</a></h1>
+      <h1 class="entry-title"><a href="/1-la-base">1 - La base</a></h1>
     
     
       <p class="meta">
@@ -91,28 +91,128 @@
   
 
 
-<time datetime="2012-08-01T12:51:00+02:00" pubdate data-updated="true">Le 01/08/2012</time>
+<time datetime="2012-08-06T21:00:00+02:00" pubdate data-updated="true">Le 06/08/2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Bienvenue cher visiteur sur ce modeste blog.</p>
+  <div class="entry-content"><h3>Informations préalables</h3>
 
 
-<h3>Qu&#8217;a t&#8217;il de particulier me direz-vous ?</h3>
+<p>Pour ce tuto voici la configuration que j&#8217;ai :</p>
 
 
-<p>Et bien, ce blog est hébergé sur GitHub, en utilisant une plate-forme appelée <a href="http://octopress.org/">Octopress</a>.</p>
+<ul>
+    <li>OS: Windows 7 pro 64bits</li>
+    <li>Editeur: <a href="http://sublimetext.com/2">Sublime text 2</a></li>
+    <li>Console: <a href="http://sourceforge.net/projects/console/">Console2</a></li>
+</ul>
 
 
-<p>La particularité d&#8217;Octopress c&#8217;est que le blog est statique, ce n&#8217;est que du HTML. Ici pas de PHP. On crée ses posts en markdown. Vous pouvez voir un exemple ci-dessous.</p>
+<h3>Prérequis</h3>
+
+
+<p>Vous devez avoir d&#8217;installé :</p>
+
+
+<ul>
+    <li><a href="http://git-scm.com/">Git</a></li>
+    <li><a href="http://www.ruby-lang.org/fr/">Ruby 1.9.3</a></li>
+</ul>
+
+
+<p>Pour pouvoir utilisé Octopress vous devez OBLIGATOIREMENT connaitre et savoir utiliser :</p>
+
+
+<ul>
+    <li>GIT</li>
+    <li>SASS et Compass</li>
+    <li>Les lignes de commandes</li>
+</ul>
+
+
+<h3>Conventions utilisées dans cet article :</h3>
+
+
+<p>$ désigne une entrée dans la console, vous ne devez PAS taper le symbole $ lorsque vous entrer du code !</p>
 
 
 
 
-<figure class='code'><figcaption><span>exemple d&#8217;entête </span></figcaption>
+<h2>Début du tuto : </h2>
+
+
+<p>Ouvrer la console, mettez-vous sur le chemin où vous voulez créer octopress, je tiens à préciser que le dossier octopress sera crée lors de la copie du dépot git, inutile de le créer.</p>
+
+
+<p>par exemple si vous voulez créer octopress dans c:\octopress, taper dans la console :</p>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ cd c:\</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<p>Si vous voulez créer octopress dans Mes documents : </p>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ cd C:\Users\Anthony\Documents</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<p>Bien entendu remplacer Anthony par votre Nom :p</p>
+
+
+<p>Pour les besoin de ce tuto, je créerait le dossier octopress_tuto directement à la racine de C, donc cela donnera :</p>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ cd c:\
+</span><span class='line'>$ git clone https://github.com/imathis/octopress.git octopress_tuto</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<p>Nous devons ensuite installer les dépendances d&#8217;Octopress, c&#8217;est-à-dire les autres gem ruby dont il a besoin pour fonctionner :</p>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ gem install bundler</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<p>puis :</p>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ bundle install</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<p>Voilà nous avons la base d&#8217;octopress et ses dépendances d&#8217;installés, vous pouvez voir ci-dessous l&#8217;arborescence ainsi créée dans <code>c:\octopress_tuto</code></p>
+
+
+
+
+<figure class='code'><figcaption><span>Arborescence d&#8217;octopress après installation </span></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -132,122 +232,406 @@
 <span class='line-number'>17</span>
 <span class='line-number'>18</span>
 <span class='line-number'>19</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>---
-</span><span class='line'>layout: post
-</span><span class='line'>title: "Bienvenue sur ce blog"
-</span><span class='line'>date: 2012-08-01 12:51
-</span><span class='line'>comments: true
-</span><span class='line'>published: true
-</span><span class='line'>categories: 
-</span><span class='line'>- Note
-</span><span class='line'>tags:
-</span><span class='line'>- octopress
-</span><span class='line'>- initation
-</span><span class='line'>- tuto
-</span><span class='line'>- tutorial
-</span><span class='line'>---
-</span><span class='line'>
-</span><span class='line'>&lt;p>Bienvenue cher visiteur sur ce modeste blog.&lt;/p>
-</span><span class='line'>&lt;h3>Qu'a t'il de particulier me direz-vous ?&lt;/h3>
-</span><span class='line'>&lt;p>Et bien, ce blog est hébergé sur GitHub, en utilisant une plate-forme appelée &lt;a href="http://octopress.org/">Octopress&lt;/a>.&lt;/p>
-</span><span class='line'>&lt;p>La particularité d'Octopress c'est que le blog est statique, ce n'est que du HTML. Ici pas de PHP. On crée ses posts en markdown. Vous pouvez voir un exemple ci-dessous.&lt;/p></span></code></pre></td></tr></table></div></figure>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+<span class='line-number'>83</span>
+<span class='line-number'>84</span>
+<span class='line-number'>85</span>
+<span class='line-number'>86</span>
+<span class='line-number'>87</span>
+<span class='line-number'>88</span>
+<span class='line-number'>89</span>
+<span class='line-number'>90</span>
+<span class='line-number'>91</span>
+<span class='line-number'>92</span>
+<span class='line-number'>93</span>
+<span class='line-number'>94</span>
+<span class='line-number'>95</span>
+<span class='line-number'>96</span>
+<span class='line-number'>97</span>
+<span class='line-number'>98</span>
+<span class='line-number'>99</span>
+<span class='line-number'>100</span>
+<span class='line-number'>101</span>
+<span class='line-number'>102</span>
+<span class='line-number'>103</span>
+<span class='line-number'>104</span>
+<span class='line-number'>105</span>
+<span class='line-number'>106</span>
+<span class='line-number'>107</span>
+<span class='line-number'>108</span>
+<span class='line-number'>109</span>
+<span class='line-number'>110</span>
+<span class='line-number'>111</span>
+<span class='line-number'>112</span>
+<span class='line-number'>113</span>
+<span class='line-number'>114</span>
+<span class='line-number'>115</span>
+<span class='line-number'>116</span>
+<span class='line-number'>117</span>
+<span class='line-number'>118</span>
+<span class='line-number'>119</span>
+<span class='line-number'>120</span>
+<span class='line-number'>121</span>
+<span class='line-number'>122</span>
+<span class='line-number'>123</span>
+<span class='line-number'>124</span>
+<span class='line-number'>125</span>
+<span class='line-number'>126</span>
+<span class='line-number'>127</span>
+<span class='line-number'>128</span>
+<span class='line-number'>129</span>
+<span class='line-number'>130</span>
+<span class='line-number'>131</span>
+<span class='line-number'>132</span>
+<span class='line-number'>133</span>
+<span class='line-number'>134</span>
+<span class='line-number'>135</span>
+<span class='line-number'>136</span>
+<span class='line-number'>137</span>
+<span class='line-number'>138</span>
+<span class='line-number'>139</span>
+<span class='line-number'>140</span>
+<span class='line-number'>141</span>
+<span class='line-number'>142</span>
+<span class='line-number'>143</span>
+<span class='line-number'>144</span>
+<span class='line-number'>145</span>
+<span class='line-number'>146</span>
+<span class='line-number'>147</span>
+<span class='line-number'>148</span>
+<span class='line-number'>149</span>
+<span class='line-number'>150</span>
+<span class='line-number'>151</span>
+<span class='line-number'>152</span>
+<span class='line-number'>153</span>
+<span class='line-number'>154</span>
+<span class='line-number'>155</span>
+<span class='line-number'>156</span>
+<span class='line-number'>157</span>
+<span class='line-number'>158</span>
+<span class='line-number'>159</span>
+<span class='line-number'>160</span>
+<span class='line-number'>161</span>
+<span class='line-number'>162</span>
+<span class='line-number'>163</span>
+<span class='line-number'>164</span>
+<span class='line-number'>165</span>
+<span class='line-number'>166</span>
+<span class='line-number'>167</span>
+<span class='line-number'>168</span>
+<span class='line-number'>169</span>
+<span class='line-number'>170</span>
+<span class='line-number'>171</span>
+<span class='line-number'>172</span>
+<span class='line-number'>173</span>
+<span class='line-number'>174</span>
+<span class='line-number'>175</span>
+<span class='line-number'>176</span>
+<span class='line-number'>177</span>
+<span class='line-number'>178</span>
+<span class='line-number'>179</span>
+<span class='line-number'>180</span>
+<span class='line-number'>181</span>
+<span class='line-number'>182</span>
+<span class='line-number'>183</span>
+<span class='line-number'>184</span>
+<span class='line-number'>185</span>
+<span class='line-number'>186</span>
+<span class='line-number'>187</span>
+<span class='line-number'>188</span>
+<span class='line-number'>189</span>
+<span class='line-number'>190</span>
+<span class='line-number'>191</span>
+<span class='line-number'>192</span>
+<span class='line-number'>193</span>
+<span class='line-number'>194</span>
+<span class='line-number'>195</span>
+<span class='line-number'>196</span>
+<span class='line-number'>197</span>
+<span class='line-number'>198</span>
+<span class='line-number'>199</span>
+<span class='line-number'>200</span>
+<span class='line-number'>201</span>
+<span class='line-number'>202</span>
+<span class='line-number'>203</span>
+<span class='line-number'>204</span>
+<span class='line-number'>205</span>
+<span class='line-number'>206</span>
+<span class='line-number'>207</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>|   .gitignore
+</span><span class='line'>|   .powrc
+</span><span class='line'>|   .rbenv-version
+</span><span class='line'>|   .rvmrc
+</span><span class='line'>|   .slugignore
+</span><span class='line'>|   CHANGELOG.markdown
+</span><span class='line'>|   config.rb
+</span><span class='line'>|   config.ru
+</span><span class='line'>|   Gemfile
+</span><span class='line'>|   Gemfile.lock
+</span><span class='line'>|   infos.txt
+</span><span class='line'>|   Rakefile
+</span><span class='line'>|   README.markdown
+</span><span class='line'>|   _config.yml
+</span><span class='line'>|   
+</span><span class='line'>+---.themes
+</span><span class='line'>|   +---classic
+</span><span class='line'>|       +---sass
+</span><span class='line'>|       |   |   screen.scss
+</span><span class='line'>|       |   |   _base.scss
+</span><span class='line'>|       |   |   _partials.scss
+</span><span class='line'>|       |   |   
+</span><span class='line'>|       |   +---base
+</span><span class='line'>|       |   |       _layout.scss
+</span><span class='line'>|       |   |       _solarized.scss
+</span><span class='line'>|       |   |       _theme.scss
+</span><span class='line'>|       |   |       _typography.scss
+</span><span class='line'>|       |   |       _utilities.scss
+</span><span class='line'>|       |   |       
+</span><span class='line'>|       |   +---custom
+</span><span class='line'>|       |   |       _colors.scss
+</span><span class='line'>|       |   |       _fonts.scss
+</span><span class='line'>|       |   |       _layout.scss
+</span><span class='line'>|       |   |       _styles.scss
+</span><span class='line'>|       |   |       
+</span><span class='line'>|       |   +---partials
+</span><span class='line'>|       |       |   _archive.scss
+</span><span class='line'>|       |       |   _blog.scss
+</span><span class='line'>|       |       |   _footer.scss
+</span><span class='line'>|       |       |   _header.scss
+</span><span class='line'>|       |       |   _navigation.scss
+</span><span class='line'>|       |       |   _sharing.scss
+</span><span class='line'>|       |       |   _sidebar.scss
+</span><span class='line'>|       |       |   _syntax.scss
+</span><span class='line'>|       |       |   
+</span><span class='line'>|       |       +---sidebar
+</span><span class='line'>|       |               _base.scss
+</span><span class='line'>|       |               _delicious.scss
+</span><span class='line'>|       |               _googleplus.scss
+</span><span class='line'>|       |               _pinboard.scss
+</span><span class='line'>|       |               _twitter.scss
+</span><span class='line'>|       |               
+</span><span class='line'>|       +---source
+</span><span class='line'>|           |   atom.xml
+</span><span class='line'>|           |   favicon.png
+</span><span class='line'>|           |   index.html
+</span><span class='line'>|           |   
+</span><span class='line'>|           +---assets
+</span><span class='line'>|           |   +---jwplayer
+</span><span class='line'>|           |       |   player.swf
+</span><span class='line'>|           |       |   
+</span><span class='line'>|           |       +---glow
+</span><span class='line'>|           |           |   glow.xml
+</span><span class='line'>|           |           |   
+</span><span class='line'>|           |           +---controlbar
+</span><span class='line'>|           |           |       background.png
+</span><span class='line'>|           |           |       blankButton.png
+</span><span class='line'>|           |           |       divider.png
+</span><span class='line'>|           |           |       fullscreenButton.png
+</span><span class='line'>|           |           |       fullscreenButtonOver.png
+</span><span class='line'>|           |           |       muteButton.png
+</span><span class='line'>|           |           |       muteButtonOver.png
+</span><span class='line'>|           |           |       normalscreenButton.png
+</span><span class='line'>|           |           |       normalscreenButtonOver.png
+</span><span class='line'>|           |           |       pauseButton.png
+</span><span class='line'>|           |           |       pauseButtonOver.png
+</span><span class='line'>|           |           |       playButton.png
+</span><span class='line'>|           |           |       playButtonOver.png
+</span><span class='line'>|           |           |       timeSliderBuffer.png
+</span><span class='line'>|           |           |       timeSliderCapLeft.png
+</span><span class='line'>|           |           |       timeSliderCapRight.png
+</span><span class='line'>|           |           |       timeSliderProgress.png
+</span><span class='line'>|           |           |       timeSliderRail.png
+</span><span class='line'>|           |           |       unmuteButton.png
+</span><span class='line'>|           |           |       unmuteButtonOver.png
+</span><span class='line'>|           |           |       
+</span><span class='line'>|           |           +---display
+</span><span class='line'>|           |           |       background.png
+</span><span class='line'>|           |           |       bufferIcon.png
+</span><span class='line'>|           |           |       muteIcon.png
+</span><span class='line'>|           |           |       playIcon.png
+</span><span class='line'>|           |           |       
+</span><span class='line'>|           |           +---dock
+</span><span class='line'>|           |           |       button.png
+</span><span class='line'>|           |           |       
+</span><span class='line'>|           |           +---playlist
+</span><span class='line'>|           |           |       item.png
+</span><span class='line'>|           |           |       itemOver.png
+</span><span class='line'>|           |           |       sliderCapBottom.png
+</span><span class='line'>|           |           |       sliderCapTop.png
+</span><span class='line'>|           |           |       sliderRail.png
+</span><span class='line'>|           |           |       sliderThumb.png
+</span><span class='line'>|           |           |       
+</span><span class='line'>|           |           +---sharing
+</span><span class='line'>|           |                   embedIcon.png
+</span><span class='line'>|           |                   embedScreen.png
+</span><span class='line'>|           |                   shareIcon.png
+</span><span class='line'>|           |                   shareScreen.png
+</span><span class='line'>|           |                   
+</span><span class='line'>|           +---blog
+</span><span class='line'>|           |   +---archives
+</span><span class='line'>|           |           index.html
+</span><span class='line'>|           |           
+</span><span class='line'>|           +---images
+</span><span class='line'>|           |       bird_32_gray.png
+</span><span class='line'>|           |       bird_32_gray_fail.png
+</span><span class='line'>|           |       code_bg.png
+</span><span class='line'>|           |       dotted-border.png
+</span><span class='line'>|           |       email.png
+</span><span class='line'>|           |       line-tile.png
+</span><span class='line'>|           |       noise.png
+</span><span class='line'>|           |       rss.png
+</span><span class='line'>|           |       search.png
+</span><span class='line'>|           |       
+</span><span class='line'>|           +---javascripts
+</span><span class='line'>|           |   |   ender.js
+</span><span class='line'>|           |   |   github.js
+</span><span class='line'>|           |   |   modernizr-2.0.js
+</span><span class='line'>|           |   |   octopress.js
+</span><span class='line'>|           |   |   pinboard.js
+</span><span class='line'>|           |   |   twitter.js
+</span><span class='line'>|           |   |   
+</span><span class='line'>|           |   +---libs
+</span><span class='line'>|           |           ender.js
+</span><span class='line'>|           |           jXHR.js
+</span><span class='line'>|           |           swfobject-dynamic.js
+</span><span class='line'>|           |           
+</span><span class='line'>|           +---_includes
+</span><span class='line'>|           |   |   after_footer.html
+</span><span class='line'>|           |   |   archive_post.html
+</span><span class='line'>|           |   |   article.html
+</span><span class='line'>|           |   |   disqus.html
+</span><span class='line'>|           |   |   facebook_like.html
+</span><span class='line'>|           |   |   footer.html
+</span><span class='line'>|           |   |   google_analytics.html
+</span><span class='line'>|           |   |   google_plus_one.html
+</span><span class='line'>|           |   |   head.html
+</span><span class='line'>|           |   |   header.html
+</span><span class='line'>|           |   |   navigation.html
+</span><span class='line'>|           |   |   twitter_sharing.html
+</span><span class='line'>|           |   |   
+</span><span class='line'>|           |   +---asides
+</span><span class='line'>|           |   |       delicious.html
+</span><span class='line'>|           |   |       github.html
+</span><span class='line'>|           |   |       googleplus.html
+</span><span class='line'>|           |   |       pinboard.html
+</span><span class='line'>|           |   |       recent_posts.html
+</span><span class='line'>|           |   |       twitter.html
+</span><span class='line'>|           |   |       
+</span><span class='line'>|           |   +---custom
+</span><span class='line'>|           |   |   |   after_footer.html
+</span><span class='line'>|           |   |   |   category_feed.xml
+</span><span class='line'>|           |   |   |   footer.html
+</span><span class='line'>|           |   |   |   head.html
+</span><span class='line'>|           |   |   |   header.html
+</span><span class='line'>|           |   |   |   navigation.html
+</span><span class='line'>|           |   |   |   
+</span><span class='line'>|           |   |   +---asides
+</span><span class='line'>|           |   |           about.html
+</span><span class='line'>|           |   |           
+</span><span class='line'>|           |   +---post
+</span><span class='line'>|           |           author.html
+</span><span class='line'>|           |           categories.html
+</span><span class='line'>|           |           date.html
+</span><span class='line'>|           |           disqus_thread.html
+</span><span class='line'>|           |           sharing.html
+</span><span class='line'>|           |           
+</span><span class='line'>|           +---_layouts
+</span><span class='line'>|                   category_index.html
+</span><span class='line'>|                   default.html
+</span><span class='line'>|                   page.html
+</span><span class='line'>|                   post.html
+</span><span class='line'>|                   
+</span><span class='line'>+---plugins
+</span><span class='line'>        backtick_code_block.rb
+</span><span class='line'>        blockquote.rb
+</span><span class='line'>        category_generator.rb
+</span><span class='line'>        code_block.rb
+</span><span class='line'>        date.rb
+</span><span class='line'>        gist_tag.rb
+</span><span class='line'>        haml.rb
+</span><span class='line'>        image_tag.rb
+</span><span class='line'>        include_array.rb
+</span><span class='line'>        include_code.rb
+</span><span class='line'>        jsfiddle.rb
+</span><span class='line'>        octopress_filters.rb
+</span><span class='line'>        pagination.rb
+</span><span class='line'>        post_filters.rb
+</span><span class='line'>        preview_unpublished.rb
+</span><span class='line'>        pullquote.rb
+</span><span class='line'>        pygments_code.rb
+</span><span class='line'>        raw.rb
+</span><span class='line'>        render_partial.rb
+</span><span class='line'>        rubypants.rb
+</span><span class='line'>        sitemap_generator.rb
+</span><span class='line'>        titlecase.rb
+</span><span class='line'>        video_tag.rb</span></code></pre></td></tr></table></div></figure>
 
 
 
 
-<p>Vous voyez en haut un bloc encadré par &#8212; qui définie les &#8220;méta&#8221; de votre article ou page, un peu comme les méta box sous wordpress.</p>
-
-
-<ul>
-    <li><strong>layout</strong>: définit la template qui va être utilisée</li>
-    <li><strong>title</strong> : définit le titre de votre article</li>
-    <li><strong>date</strong>: vous avez compris !</li>
-    <li><strong>comments</strong>: définit si vous activez ou pas les commentaires via disqus</li>
-    <li><strong>published</strong>: définit si votre atricle sera publié ou pas lors du &#8220;generate&#8221; (on verra ça après)</li>
-    <li><strong>categories</strong>: définit la ou les catégories que vous attribuer à votre article</li>
-    <li><strong>tags</strong>: définit le ou les tags que vous attribuer à votre article</li>
-</ul>
-
-
-<p>Non mais attends si ça fait tout comme wordpress pourquoi s&#8217;embêter avec <a href="http://octopress.org/">Octopress</a>. Encore un truc à apprendre, quoi !</p>
-
-
-<hr>
-
-
-<h3>Points + :</h3>
-
-
-<p></p>
-
-<p>Pas de base de données, pas de mysql, pas d&#8217;injection SQL, j&#8217;en passe et des meilleures. Ici que du HTML. La rapidité de votre blog sera x10 même avec de gros pics à 10 000 visiteurs en même temps.</p>
-
-
-<p>Pas de php, donc pas server side, la rapidité s&#8217;en ressent aussi.</p>
-
-
-<p>Vous pouvez utiliser votre editeur de texte favori avec vos snippets, votre environnement favori, pas de tinyMCE. Si vous avez l&#8217;habitude de travailler avec <a href="http://www.sublimetext.com/2">Sublime text 2</a> comme moi, vous écrirez vos articles plus rapidement.</p>
-
-
-<p>Vous pouvez utiliser HTML 5, CSS 3, Octopress est livré par défaut avec <a href="http://sass-lang.com/">SASS</a> et <a href="http://compass-style.org/">Compass</a></p>
-
-
-<p>Vous avez des <a href="http://octopress.org/docs/plugins/">plugins</a> livrés de base avec :</p>
-
-
-<ul>
-    <li><a href="http://octopress.org/docs/plugins/video-tag/">HTML5 Video Tag</a> - <em>Vidéos mp4 embarquée encodée en HTML5</em></li>
-    <li><a href="http://octopress.org/docs/plugins/backtick-codeblock/">Backtick Code Block</a> - <em>pour le partage de code simple et léger</em></li>
-    <li><a href="http://octopress.org/docs/plugins/codeblock/">Code Block</a> - <em>pour partager du code avec des titres et des liens</em></li>
-    <li><a href="http://octopress.org/docs/plugins/include-code/">Include Code</a> - <em>incorporer du code à partir de votre système de fichiers avec un lien de téléchargement</em></li>
-    <li><a href="http://octopress.org/docs/plugins/gist-tag/">Gist Tag</a> - <em>télécharge automatiquement et intègre des gist Github</em></li>
-    <li><a href="http://octopress.org/docs/plugins/jsfiddle-tag/">jsFiddle</a> - <em>incorporer du code à partir de jsFiddle</em></li>
-    <li><a href="http://octopress.org/docs/plugins/image-tag/">Image Tag</a> - <em>facilement publier des images avec des noms de classe et les titres</em></li>
-    <li><a href="http://octopress.org/docs/plugins/render-partial/">Render Partial</a> - <em>insérer un fichier dans un autre article ou la page</em></li>
-    <li><a href="http://octopress.org/docs/plugins/blockquote/">Block Quote</a> - <em>générer des belles citations sémantiques</em></li>
-    <li><a href="http://octopress.org/docs/plugins/pullquote/">Pull Quote</a> - <em>générer des guillemets &mdash; - pas de données en double, pas de javascript</em></li>
-    <li><a href="http://octopress.org/docs/plugins/category-generator/">Category Generator</a> - <em>génère des pages d&#8217;archives pour chaque catégorie du blog</em></li>
-    <li><a href="http://octopress.org/docs/plugins/include-array/">Include Array</a> - <em>comprend un tableau de partials indiqués dans _config.yml</em></li>
-</ul>
-
-
-<p>Vous avez votre blog ET vote logiciel de versioning au <em>même</em> endroit.</p>
-
-
-<p>Le thème par défaut est &#8220;responsive&#8221;.</p>
-
-
-<p>Vous pouvez inclure votre propre nom de domaine et ainsi avoir votre blog à monsite.com au lieu de monsite.github.com</p>
-
-
-<h3>Point +++ :</h3>
-
-
-<p>Vote site est hébergé <strong>gratuitement</strong> sur GitHub, leur infrastructure est juste énorme. Leurs serveurs sont costauds.</p>
-
-
-<hr>
-
-
-<h3>Points - :</h3>
-
-
-<p>Vous devez connaitre Git et GitHub pour pouvoir blogguer et SASS pour modifier votre thème.</p>
-
-
-<p>Vous devez avoir une machine avec vos sources octopress dessus et git, ruby et plusieurs gem d&#8217;installés dessus pour pouvoir mettre votre blog à jour.</p>
-
-
-<p>A chaque mise à jour de votre site,  vous devez rénénérer <strong>tout</strong> votre site. Bon je vous rassure ça prends 10 secondes mais ça peut surement durer 1 à 2 minutes pour les gros blogs avec des centaines d&#8217;articles dessus, vu que ce n&#8217;est que du HTML.</p>
-
-
-<hr>
-
-
-<p>Voilà cette présentation est terminée, j&#8217;espère très prochainement vous faire un tuto complet en français pour permettre au gens qui veulent essayé de tester, même si le site <a href="http://octopress.org/">Octopress</a> l&#8217;explique très simplement en anglais.</p>
-
-
-<h6>PS : le thème de ce site est loin d&#8217;être fini, il va évolué rapidement vers son état final. Merci de votre compréhension.</h6>
+<p>Nous allons maintenant créer notre thème rendez-vous dans le prochain article</p>
 
 </div>
   
@@ -257,6 +641,8 @@
     </article>
   
   <div class="pagination">
+    
+      <a class="prev" href="/page/5/">&larr; Older</a>
     
     <a href="/archives">Archives</a>
     
